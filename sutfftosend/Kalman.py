@@ -14,8 +14,8 @@ Header_info, Translation_info, Lidar_info = CSV_Read_Lidar_data(data_path)
 
 # Parameters for the robot 
 # TODO this will be pulled from ros later
-x_vel = 0.0
-y_vel = 0.75
+x_vel = 0.75
+y_vel = 0.0
 z_vel = 0.0
 
 b = .235 # distance between robots wheels (meters)
@@ -27,9 +27,8 @@ nondeterministic parameters of the motor drive and the wheel-floor interaction. 
 k_r =  .001
 k_l =  .001
 
-Q_t  = np.array([[1.0,   0,   0],
-                [  0, 1.0,   0],
-                [  0,   0, 1.0]])
+Q_t  = np.array([[1.0,   0],
+                [  0, 1.0]])
 '1. Robot Position Prediction'
 
 
@@ -55,9 +54,8 @@ R_t = np.array([sigma_aa, sigma_ar ],
                [sigma_ra, sigma_rr ])
 
 
-F_k_minus_1 = np.array([[1.0,  0,   0],
-                        [  0,1.0,   0],
-                        [  0,  0, 1.0]])
+F_k_minus_1 = np.array([[1.0,  0],
+                        [ 0, 1.0]])
 
 
 '3. Measurement Prediction'
@@ -69,17 +67,12 @@ F_k_minus_1 = np.array([[1.0,  0,   0],
 '5. Estimation'
 
 
-
-
 """
 Begining the first portions of the math for the Kalman filter implementations
-
 """
 
 """
 getting predicted positions p_prime - book 337
-
-
 """
 def position_prediction(pos_t_minus1,delta_sl,delta_sr):
 
