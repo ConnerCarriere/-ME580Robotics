@@ -132,8 +132,6 @@ def measurement_prediction(x_hat,map):
     H_j[0:1,0:2,:] = np.array([[0,  0,  -1],  
                   [-np.cos(alpha_map[:]), -np.sin(alpha_map[:]), 0]])  #it might not be able to handle this notation. Could easily be a loop
 
-
-
     return z_hat_t,H_j
 
 def matching(z_hat_t,z_t,R_t,H_j,g_thresh,P_hat_t,g):
@@ -173,11 +171,13 @@ data =
 """
 
 def covarience_line_fitting(data,sigma_angle = 0, sigma_dist = .005):
+
     sigma_angle = sigma_angle *np.ones(len(data))
     sigma_dist = sigma_dist* np.ones(len(data))
 
-    dist = data[0] #whatever positions stores the distances from 0,0
+    dist = data[0] #whatever positions stores the distances from 0,0 
     angle = data[1] #whatever positions stores the angles with the x axis
+
     x = dist*np.cos(angle)
     y = dist*np.sin(angle)
 
