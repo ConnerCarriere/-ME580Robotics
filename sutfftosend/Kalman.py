@@ -34,13 +34,16 @@ Q_t  = np.array([[1.0,   0],
 
 
 '2. Observation'
-# alpha and rho from the lidar data
+# alpha and rho extracted from the lidar data
 alpha_t = 'line parameter 1'
 rho_t = 'line parameter 2'
 
 z_t = np.empty((2,1))
 z_t = np.array([alpha_t],
                [rho_t])
+
+
+# extract lines and their uncertenties
 
 # Covariane matrix for eachlinec calculated
 # TODO get values

@@ -1,5 +1,5 @@
 import numpy as np
-from ME580.Assignment_1.Lidar_read import Lidar_read
+from LidarRead import CSV_Read_Lidar_data
 import matplotlib.pyplot as plt
 import math
 
@@ -134,12 +134,13 @@ def SplitAndMerge(P, threshold):
 
 threshold = 10
 
-data = Lidar_read('data_file2.csv', 70) #70
-P = data[0]
-# P = P[60:100]
+Header_info, Translation_info, Lidar_info = CSV_Read_Lidar_data('sutfftosend/Hallway_Lidar_data_dinosars2.csv') #70
+
+data = Polar2Cartesian(Lidar_info[0], Lidar_info['radians'])
+P = data
 
 plt.figure()
-plt.scatter(P[:, 0], P[:, 1], c='black')
+plt.scatter(data[:, 0], data[:, 1], c='black')
 # plt.scatter(data[0][0, 0], data[0][1, 1], c='red')
 # plt.show()
 
@@ -149,8 +150,9 @@ lines = []
 for i in range(len(points)-1):
     lines.append([points[i], points[i+1]])
     plt.plot([points[i][0], points[i+1][0]], [points[i][1], points[i+1][1]], '-o')
+final_lines = lines
+# final_lines = gap_detection(lines, P, threshold)
 
-final_lines = gap_detection(lines, P, threshold)
 plt.figure()
 plt.title('Final Lines')
 plt.scatter(P[:, 0], P[:, 1], c='black')
