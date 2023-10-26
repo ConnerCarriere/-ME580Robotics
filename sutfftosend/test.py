@@ -43,10 +43,10 @@ z_t = np.array([alpha_t],
                [rho_t])
 
 # Covariane matrix for eachlinec calculated
-# TODO get values
+# TODO get values  ~~~> call obersvation funtion to update
 sigma_aa = 1 
-sigma_ar = 1
-sigma_ra = 1
+sigma_ar = 0
+sigma_ra = 0
 sigma_rr = 1
 
 R_t = np.empty((2,2))
@@ -107,8 +107,31 @@ the obsorvation step should spin the lidar, calculate and return the lines in th
 def observation(data):
 
     N = len(data)
-    z_t= np.zeros(2,N)  # z_t^i = [alpha_t^i, r_t^i]^T for 0<i<N lines
-    
+    z_t = np.zeros(2,1,N)  # z_t^i = [alpha_t^i, r_t^i]^T for 0<i<N lines
+    R_t = np.zeros(2,2,N)
+
+    z_t[0,1,:] = data.alphas 
+    z_t[1,1,:] = data.rhos
+
+    return z_t,R_t
+
+
+"""
+The measurements needs to take the MAP data and move the lines into the Robts frame (from world) THEN match lines together or something
+"""
+def measurement_prediction(x_hat,map):
+
+    N = len(map)
+    z_hat_t = np.zeros(2,1,N) # The pridiction of what the Lines detected should be 
+    alpha_map = data.alphas
+    rho_map = data.rhos
+    z_hat_t[0,1,:] = alpha_map[:] - x_hat[2] # removing the robots orientation in the world to rotate the line angles into frame
+    z_hat_t[1,1,:] = rho_map[:]-x_hat[0]*np.cos(alpha_map[:])+x_hat[1]*np.sin(alpha_map[:]) # translation portion for the lines
+
+    return 0
+
+
+
 """
 find our estimated covarience of the fitted lines.
 We assume the varience of angle and distance are calculated before hand and constant for each collects point.
@@ -162,5 +185,5 @@ def covarience_line_fitting(data,sigma_angle = 0, sigma_dist = .005):
         J = A @ B
         C_l = C_l+J*C_m*J.T
 
-    return C_l
+    return rho, alpha, C_l
 
