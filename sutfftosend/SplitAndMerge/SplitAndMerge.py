@@ -90,31 +90,31 @@ def gap_detection(lines, points, threshold):
         for j in range(len(points)):
             # distance = point_to_line_distance(points[j], lines[i])
             distance = getDistance(points[j], lines[i][0], lines[i][1])
-            if distance <= (threshold * 2):
+            if distance <= (threshold * 1):
             # if distance < r:
                 points_in_thresh.append(points[j])
 
-        if len(points_in_thresh) <= 2 and line_dist <= 50:
+        if len(points_in_thresh) <= 5 and line_dist <= 0.1:
             good_lines.append(lines[i])
             continue
 
         # check to see what % of points are between the threshold of the first and last point (might need my own threshold)
         p1_points = points_within_radius(point_1, points_in_thresh, r)
         p2_points = points_within_radius(point_2, points_in_thresh, r)
-        print(len(p1_points))
-        print(len(p2_points))
-        print(len(points_in_thresh))
+        # print(len(p1_points))
+        # print(len(p2_points))
+        # print(len(points_in_thresh))
 
         percent_in_radius = (len(p1_points) + len(p2_points)) / (len(points_in_thresh))
-        print(percent_in_radius)
+        # print(percent_in_radius)
 
-        if percent_in_radius <= 0.30:
-            print("good line")
+        if percent_in_radius <= 0.15:
+            # print("good line")
             good_lines.append(lines[i])
-        else:
-            print("bad line")
+        # else:
+        #     print("bad line")
         # plt.show()
-        print("\n")
+        # print("\n")
     return good_lines
 
 
@@ -132,15 +132,17 @@ def SplitAndMerge(P, threshold):
 
 '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
 
-threshold = 10
+threshold = 0.3
 
-Header_info, Translation_info, Lidar_info = CSV_Read_Lidar_data('sutfftosend/Hallway_Lidar_data_dinosars2.csv') #70
+Header_info, Translation_info, Lidar_info = CSV_Read_Lidar_data('Hallway_Lidar_data_dinosars2.csv') #70
 
 data = Polar2Cartesian(Lidar_info[0], Lidar_info['radians'])
-P = data
 
-plt.figure()
-plt.scatter(data[:, 0], data[:, 1], c='black')
+P = np.array([data[:,0][np.isfinite(data[:,0])], data[:,1][np.isfinite(data[:,1])]]).T
+# P = P[:]
+
+# plt.figure()
+# plt.scatter(P[:, 0], P[:, 1], c='black')
 # plt.scatter(data[0][0, 0], data[0][1, 1], c='red')
 # plt.show()
 
@@ -149,9 +151,9 @@ points = SplitAndMerge(P, threshold)
 lines = []
 for i in range(len(points)-1):
     lines.append([points[i], points[i+1]])
-    plt.plot([points[i][0], points[i+1][0]], [points[i][1], points[i+1][1]], '-o')
-final_lines = lines
-# final_lines = gap_detection(lines, P, threshold)
+    # plt.plot([points[i][0], points[i+1][0]], [points[i][1], points[i+1][1]], '-o')
+# final_lines = lines
+final_lines = gap_detection(lines, P, threshold)
 
 plt.figure()
 plt.title('Final Lines')
@@ -159,6 +161,6 @@ plt.scatter(P[:, 0], P[:, 1], c='black')
 for i in range(len(final_lines)):
     tmp = np.array(final_lines[i])
     plt.plot(tmp[:,0], tmp[:,1], '-o')
-print(len(lines))
-print(len(final_lines))
+# print(len(lines))
+# print(len(final_lines))
 plt.show()
