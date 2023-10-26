@@ -127,10 +127,39 @@ def measurement_prediction(x_hat,map):
     rho_map = data.rhos
     z_hat_t[0,1,:] = alpha_map[:] - x_hat[2] # removing the robots orientation in the world to rotate the line angles into frame
     z_hat_t[1,1,:] = rho_map[:]-x_hat[0]*np.cos(alpha_map[:])+x_hat[1]*np.sin(alpha_map[:]) # translation portion for the lines
+    H_j = np.zeros(2,3,N)
 
-    return 0
+    H_j[0:1,0:2,:] = np.array([[0,  0,  -1],  
+                  [-np.cos(alpha_map[:]), -np.sin(alpha_map[:]), 0]])  #it might not be able to handle this notation. Could easily be a loop
 
 
+
+    return z_hat_t,H_j
+
+def matching(z_hat_t,z_t,R_t,H_j,g_thresh,P_hat_t,g):
+
+    matches = []
+    #initializedng vt
+
+    v_t = np.zeros((2,2,len(z_t),len(z_hat_t)))
+    sigma_itt = np.zeros((2,2,len(z_t),len(z_hat_t)))
+    #This could be vectorized or whatever but i think itll be okay
+    for i in range(len(z_t)):
+        for j in range(len(z_hat_t)):
+            v_t[:,:,i,j] = z_t[i]-z_hat_t[j]
+
+            sigma_itt[:,:,i,j] = H_j[j] @ P_hat_t @ H_j[j].T + R_t(i)
+
+    # Mahalanobis distance
+    for i in range(len(z_t)):
+        for j in range(len(z_hat_t)):
+            v_ = v_t[:,i,j]
+            sigma_ = sigma_itt[:,:,i,j]
+
+            mah_dist = v_.T @ sigma_ @ v_
+            if mah_dist <= g:
+                matches.append([i,j])
+    return matches
 
 """
 find our estimated covarience of the fitted lines.
