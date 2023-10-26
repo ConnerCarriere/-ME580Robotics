@@ -91,7 +91,7 @@ def gap_detection(lines, points, threshold):
             # distance = point_to_line_distance(points[j], lines[i])
             distance = getDistance(points[j], lines[i][0], lines[i][1])
             if distance <= (threshold * 1):
-            # if distance < r:
+                # if distance < r:
                 points_in_thresh.append(points[j])
 
         if len(points_in_thresh) <= 5 and line_dist <= 0.1:
@@ -129,38 +129,112 @@ def SplitAndMerge(P, threshold):
         points = np.vstack((P[0, :], P[-1, :]))
     return points
 
+def flatten(lst):
+    result = []
+    for item in lst:
+        if isinstance(item, list):
+            result.extend(flatten(item))
+        else:
+            result.append(item)
+    return result
 
 '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
 
-threshold = 0.3
-
-Header_info, Translation_info, Lidar_info = CSV_Read_Lidar_data('Hallway_Lidar_data_dinosars2.csv') #70
-
-data = Polar2Cartesian(Lidar_info[0], Lidar_info['radians'])
-
-P = np.array([data[:,0][np.isfinite(data[:,0])], data[:,1][np.isfinite(data[:,1])]]).T
-# P = P[:]
-
+# threshold = 0.3
+#
+# Header_info, Translation_info, Lidar_info = CSV_Read_Lidar_data('Hallway_Lidar_data_dinosars2.csv')  # 70
+#
+# data = Polar2Cartesian(Lidar_info[0], Lidar_info['radians'])
+#
+# P = np.array([data[:, 0][np.isfinite(data[:, 0])], data[:, 1][np.isfinite(data[:, 1])]]).T
+#
+# points = SplitAndMerge(P, threshold)
+#
+#
+#
+# lines = []
+# for i in range(len(points) - 1):
+#     lines.append([points[i], points[i + 1]])
+#     # plt.plot([points[i][0], points[i+1][0]], [points[i][1], points[i+1][1]], '-o')
+# # final_lines = lines
+# final_lines = gap_detection(lines, P, threshold)
+#
+# #flatten it to get the shitty points
+# flat_list = flatten(final_lines)
+# flat_list.append(flat_list[0])
+# flat_list = np.array(flat_list)
+#
+# for i in range(points.shape[0]-1):
+#     ro, alpha = GetPolar(points[i:i + 2, 0], points[i:i + 2, 1])
+#     ro, alpha = CheckPolar(ro, alpha)
+#
 # plt.figure()
+# plt.title('og')
 # plt.scatter(P[:, 0], P[:, 1], c='black')
-# plt.scatter(data[0][0, 0], data[0][1, 1], c='red')
+# plt.plot(points[:,0], points[:,1])
+#
+# plt.figure()
+# plt.title('with gap detection')
+# plt.scatter(P[:, 0], P[:, 1], c='black')
+# plt.plot(flat_list[:,0], flat_list[:,1], '-o')
+#
+# plt.figure()
+# plt.title('actual Lines')
+# plt.scatter(P[:, 0], P[:, 1], c='black')
+# for i in range(len(final_lines)):
+#     tmp = np.array(final_lines[i])
+#     plt.plot(tmp[:, 0], tmp[:, 1], '-o')
+# # print(len(lines))
+# # print(len(final_lines))
+# plt.scatter(0, 0, c='red')  # replace this with the origin point
 # plt.show()
 
-points = SplitAndMerge(P, threshold)
 
-lines = []
-for i in range(len(points)-1):
-    lines.append([points[i], points[i+1]])
-    # plt.plot([points[i][0], points[i+1][0]], [points[i][1], points[i+1][1]], '-o')
-# final_lines = lines
-final_lines = gap_detection(lines, P, threshold)
+def Algorithm_split_and_merge(Lidar_info, threshold=0.3, plot=False):
+    data = Polar2Cartesian(Lidar_info[0], Lidar_info['radians'])
 
-plt.figure()
-plt.title('Final Lines')
-plt.scatter(P[:, 0], P[:, 1], c='black')
-for i in range(len(final_lines)):
-    tmp = np.array(final_lines[i])
-    plt.plot(tmp[:,0], tmp[:,1], '-o')
-# print(len(lines))
-# print(len(final_lines))
-plt.show()
+    P = np.array([data[:, 0][np.isfinite(data[:, 0])], data[:, 1][np.isfinite(data[:, 1])]]).T
+
+    points = SplitAndMerge(P, threshold)
+
+    lines = []
+    for i in range(len(points) - 1):
+        lines.append([points[i], points[i + 1]])
+        # plt.plot([points[i][0], points[i+1][0]], [points[i][1], points[i+1][1]], '-o')
+    # final_lines = lines
+    final_lines = gap_detection(lines, P, threshold)
+
+    # flatten it to get the shitty points
+    flat_list = flatten(final_lines)
+    flat_list.append(flat_list[0])
+    flat_list = np.array(flat_list)
+
+    swag_money = []
+    for i in range(points.shape[0] - 1):
+        ro, alpha = GetPolar(points[i:i + 2, 0], points[i:i + 2, 1])
+        ro, alpha = CheckPolar(ro, alpha)
+        swag_money.append([ro, alpha])
+
+    if plot==True:
+        plt.figure()
+        plt.title('og')
+        plt.scatter(P[:, 0], P[:, 1], c='black')
+        plt.plot(points[:, 0], points[:, 1])
+
+        plt.figure()
+        plt.title('with gap detection')
+        plt.scatter(P[:, 0], P[:, 1], c='black')
+        plt.plot(flat_list[:, 0], flat_list[:, 1], '-o')
+
+        plt.figure()
+        plt.title('actual Lines')
+        plt.scatter(P[:, 0], P[:, 1], c='black')
+        for i in range(len(final_lines)):
+            tmp = np.array(final_lines[i])
+            plt.plot(tmp[:, 0], tmp[:, 1], '-o')
+        # print(len(lines))
+        # print(len(final_lines))
+        plt.scatter(0, 0, c='red')  # replace this with the origin point
+        plt.show()
+
+    return swag_money
