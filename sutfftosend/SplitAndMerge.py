@@ -1,5 +1,5 @@
 import numpy as np
-from LidarRead import CSV_Read_Lidar_data
+from CsvRead import CSV_Read_Lidar_data
 import matplotlib.pyplot as plt
 import math
 
@@ -73,7 +73,7 @@ def points_within_radius(mainpoint, points, r):
 
 def gap_detection(lines, points, threshold):
     good_lines = []
-
+    points_in_thresh_total = []
     for i in range(len(lines)):
         # get point 1 and point 2 of the line
         point_1 = lines[i][0]
@@ -93,9 +93,10 @@ def gap_detection(lines, points, threshold):
             if distance <= (threshold * 1):
                 # if distance < r:
                 points_in_thresh.append(points[j])
-
+        
         if len(points_in_thresh) <= 5 and line_dist <= 0.1:
             good_lines.append(lines[i])
+            points_in_thresh_total.append(points_in_thresh)
             continue
 
         # check to see what % of points are between the threshold of the first and last point (might need my own threshold)
@@ -111,11 +112,13 @@ def gap_detection(lines, points, threshold):
         if percent_in_radius <= 0.15:
             # print("good line")
             good_lines.append(lines[i])
+            points_in_thresh_total.append(points_in_thresh)
         # else:
         #     print("bad line")
         # plt.show()
         # print("\n")
-    return good_lines
+        
+    return good_lines, points_in_thresh_total
 
 
 def SplitAndMerge(P, threshold):
@@ -202,18 +205,18 @@ def Algorithm_split_and_merge(Lidar_info, threshold=0.3, plot=False):
         lines.append([points[i], points[i + 1]])
         # plt.plot([points[i][0], points[i+1][0]], [points[i][1], points[i+1][1]], '-o')
     # final_lines = lines
-    final_lines = gap_detection(lines, P, threshold)
+    final_lines, points_in_line = gap_detection(lines, P, threshold)
 
     # flatten it to get the shitty points
     flat_list = flatten(final_lines)
     flat_list.append(flat_list[0])
     flat_list = np.array(flat_list)
 
-    swag_money = []
-    for i in range(points.shape[0] - 1):
-        ro, alpha = GetPolar(points[i:i + 2, 0], points[i:i + 2, 1])
-        ro, alpha = CheckPolar(ro, alpha)
-        swag_money.append([ro, alpha])
+    #convert from xy back to alpha rho
+    alpha_rho = []
+    for i in range(len(final_lines)):
+        alpha, rho = GetPolar([final_lines[i][0][0], final_lines[i][1][0]], [final_lines[i][0][1], final_lines[i][1][1]])
+        alpha_rho.append([alpha, rho])
 
     if plot==True:
         plt.figure()
@@ -237,4 +240,4 @@ def Algorithm_split_and_merge(Lidar_info, threshold=0.3, plot=False):
         plt.scatter(0, 0, c='red')  # replace this with the origin point
         plt.show()
 
-    return swag_money
+    return final_lines, points_in_line, alpha_rho

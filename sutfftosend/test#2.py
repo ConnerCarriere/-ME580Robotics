@@ -3,24 +3,21 @@ import math
 import csv
 import matplotlib.pyplot as plt
 import pandas as pd
-from sutfftosend.CsvRead import CSV_Read_Lidar_data
-from sutfftosend.SplitAndMerge.SplitAndMerge import Algorithm_split_and_merge
+from CsvRead import CSV_Read_Lidar_data
+from SplitAndMerge import Algorithm_split_and_merge
 
 
-def covarience_line_fitting(data, sigma_angle=0, sigma_dist=.005):
-    sigma_angle = sigma_angle * np.ones(len(data))
-    sigma_dist = sigma_dist * np.ones(len(data))
+def covarience_line_fitting(points_in_line, line_alpha_rho, sigma_angle=0, sigma_dist=.005):
+    sigma_angle = sigma_angle * np.ones(len(points_in_line))
+    sigma_dist = sigma_dist * np.ones(len(points_in_line))
 
-    data = np.array(data)
+    data = np.array(points_in_line)
 
-    dist = data[:,0]  # whatever positions stores the distances from 0,0
-    angle = data[:,1]  # whatever positions stores the angles with the x axis
+    #INPUIT IS X AND Y POINTS WITHIN A LINE
+    dist = line_alpha_rho[1]  # whatever positions stores the distances from 0,0
+    angle = line_alpha_rho[0]  # whatever positions stores the angles with the x axis
     
-    x = dist * np.cos(angle)
-    y = dist * np.sin(angle)
-
     x = data[:,0]
-
     y = data[:,1]
 
     n = len(x)
@@ -52,20 +49,24 @@ def covarience_line_fitting(data, sigma_angle=0, sigma_dist=.005):
 
         # Jacobian of function converting dist and angle to x and y
 
-        B = np.array([[math.cos(angle[i]), -dist[i] * math.sin(angle[i])],
-                      [math.sin(angle[i]), -dist[i] * math.cos(angle[i])]])
+        B = np.array([[math.cos(angle), -dist * math.sin(angle)],
+                      [math.sin(angle), -dist * math.cos(angle)]])
         J = A @ B
         C_l = C_l + J * C_m * J.T
 
     return rho, alpha, C_l
 
 # path to csv data
-data_path = 'Hallway_Lidar_data_dinosars2.csv'
+data_path = 'sutfftosend/Hallway_Lidar_data_dinosars2.csv'
 Header_info, Translation_info, Lidar_info = CSV_Read_Lidar_data(data_path)
 
-data = Algorithm_split_and_merge(Lidar_info, plot=False)
+Lines, points_in_line, line_alpha_rho = Algorithm_split_and_merge(Lidar_info, plot=False)
 
-rho, alpha, C_l = covarience_line_fitting(data)
+
+line_info = []
+for i in range(len(points_in_line)):
+    rho, alpha, C_l = covarience_line_fitting(points_in_line[i], line_alpha_rho[i])
+    line_info.append([rho, alpha, C_l])
 
 print('test')
 # """
