@@ -13,11 +13,11 @@ def covarience_line_fitting(data, sigma_angle=0, sigma_dist=.005):
 
     data = np.array(data)
 
-    # dist = data[:,0]  # whatever positions stores the distances from 0,0
-    # angle = data[:,1]  # whatever positions stores the angles with the x axis
-    #
-    # x = dist * np.cos(angle)
-    # y = dist * np.sin(angle)
+    dist = data[:,0]  # whatever positions stores the distances from 0,0
+    angle = data[:,1]  # whatever positions stores the angles with the x axis
+    
+    x = dist * np.cos(angle)
+    y = dist * np.sin(angle)
 
     x = data[:,0]
 
