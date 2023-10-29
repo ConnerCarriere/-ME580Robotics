@@ -113,6 +113,9 @@ def observation(data):
     z_t[0,1,:] = data.alphas 
     z_t[1,1,:] = data.rhos
 
+
+    R_t = data.cov[:]
+
     return z_t,R_t
 
 
@@ -155,10 +158,15 @@ def matching(z_hat_t,z_t,R_t,H_j,g_thresh,P_hat_t,g):
             sigma_ = sigma_itt[:,:,i,j]
 
             mah_dist = v_.T @ sigma_ @ v_
-            if mah_dist <= g:
+            if mah_dist <= g**2:
                 matches.append([i,j])
     return matches
 
+def pos_estimation():
+    
+
+
+    return
 """
 find our estimated covarience of the fitted lines.
 We assume the varience of angle and distance are calculated before hand and constant for each collects point.
