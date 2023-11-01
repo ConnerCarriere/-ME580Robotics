@@ -125,7 +125,7 @@ The measurements needs to take the MAP data and move the lines into the Robts fr
 def measurement_prediction(x_hat,map):
 
     N = len(map)
-    z_hat_t = np.zeros(2,1,N) # The pridiction of what the Lines detected should be 
+    z_hat_t = np.zeros(2,1,N) # The pridiction of what the Lines detected should be, from map
     alpha_map = data.alphas
     rho_map = data.rhos
     z_hat_t[0,1,:] = alpha_map[:] - x_hat[2] # removing the robots orientation in the world to rotate the line angles into frame
@@ -137,6 +137,13 @@ def measurement_prediction(x_hat,map):
 
     return z_hat_t,H_j
 
+
+#TODO
+"""
+add to return the matched simga_ values, and v_t values in the matching function, these should be one dimensional lists or whatever
+
+
+"""
 def matching(z_hat_t,z_t,R_t,H_j,g_thresh,P_hat_t,g):
 
     matches = []
@@ -162,7 +169,7 @@ def matching(z_hat_t,z_t,R_t,H_j,g_thresh,P_hat_t,g):
                 matches.append([i,j])
     return matches
 
-def pos_estimation():
+def pos_estimation(K_matrixs, x_hat, v_t,):
     
 
 
