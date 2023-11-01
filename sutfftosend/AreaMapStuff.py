@@ -3,9 +3,23 @@ import math
 import csv
 import matplotlib.pyplot as plt
 import pandas as pd
-from CsvRead import CSV_Read_Lidar_data
 from SplitAndMerge import Algorithm_split_and_merge
 
+def CSV_Read_Lidar_data(data_path):
+    rows = []
+    with open(data_path, 'r') as file:
+        csvreader = csv.reader(file)
+        for row in csvreader:
+            rows.append(row)
+
+    # Lidar Dataframe
+    # X values is the scan number, Y values are the scan pos
+    Lidar_info = pd.DataFrame(np.array(rows[2::3]).T)
+    Lidar_info.insert(0, "radians", np.array(list(np.multiply(float(Header_info['angle_increment']), np.arange(1, 1081))))) #insert the radians per scan
+    Lidar_info.insert(0, "degrees", Lidar_info['radians'] * (180/3.14)) #insert the radians per scan
+    Lidar_info = Lidar_info.astype(float)
+
+    return Header_info, Translation_info, Lidar_info
 
 def covarience_line_fitting(points_in_line, line_alpha_rho, sigma_angle=0, sigma_dist=.005):
     sigma_angle = sigma_angle * np.ones(len(points_in_line))
@@ -60,13 +74,13 @@ def covarience_line_fitting(points_in_line, line_alpha_rho, sigma_angle=0, sigma
 data_path = 'sutfftosend/DownstairsGTdata.csv'
 Header_info, Translation_info, Lidar_info = CSV_Read_Lidar_data(data_path)
 
-# Lines, points_in_line, line_alpha_rho = Algorithm_split_and_merge(Lidar_info, plot=False)
+Lines, points_in_line, line_alpha_rho = Algorithm_split_and_merge(Lidar_info, plot=True)
 
 
-line_info = []
-for i in range(len(points_in_line)):
-    rho, alpha, C_l = covarience_line_fitting(points_in_line[i], line_alpha_rho[i])
-    line_info.append([rho, alpha, C_l])
+# line_info = []
+# for i in range(len(points_in_line)):
+#     rho, alpha, C_l = covarience_line_fitting(points_in_line[i], line_alpha_rho[i])
+#     line_info.append([rho, alpha, C_l])
 
 print('test')
 
