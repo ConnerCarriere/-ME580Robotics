@@ -77,10 +77,10 @@ Header_info, Translation_info, Lidar_info = CSV_Read_Lidar_data(data_path)
 Lines, points_in_line, line_alpha_rho = Algorithm_split_and_merge(Lidar_info, plot=True)
 
 
-# line_info = []
-# for i in range(len(points_in_line)):
-#     rho, alpha, C_l = covarience_line_fitting(points_in_line[i], line_alpha_rho[i])
-#     line_info.append([rho, alpha, C_l])
+line_info = []
+for i in range(len(points_in_line)):
+    rho, alpha, C_l = covarience_line_fitting(points_in_line[i], line_alpha_rho[i])
+    line_info.append([rho, alpha, C_l])
 
 print('test')
 
