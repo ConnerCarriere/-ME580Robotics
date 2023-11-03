@@ -105,7 +105,10 @@ the obsorvation step should spin the lidar, calculate and return the lines in th
 
 """
 def observation(data):
+    """
+    the obsorvation step should spin the lidar, calculate and return the lines in the robot's frame (at timestep t)
 
+    """
     N = len(data)
     z_t = np.zeros(2,1,N)  # z_t^i = [alpha_t^i, r_t^i]^T for 0<i<N lines
     R_t = np.zeros(2,2,N)
@@ -123,7 +126,9 @@ def observation(data):
 The measurements needs to take the MAP data and move the lines into the Robts frame (from world) THEN match lines together or something
 """
 def measurement_prediction(x_hat,map):
-
+    """
+    The measurements needs to take the MAP data and move the lines into the Robts frame (from world) THEN match lines together or something
+    """
     N = len(map)
     z_hat_t = np.zeros(2,1,N) # The pridiction of what the Lines detected should be, from map
     alpha_map = data.alphas
