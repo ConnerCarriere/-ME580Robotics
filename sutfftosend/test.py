@@ -152,8 +152,11 @@ add to return the matched simga_ values, and v_t values in the matching function
 def matching(z_hat_t,z_t,R_t,H_j,g_thresh,P_hat_t,g):
 
     matches = []
+    v_t_matches = []
+    sigmas_matches = []
+    H_matches = []
     #initializedng vt
-
+    
     v_t = np.zeros((2,2,len(z_t),len(z_hat_t)))
     sigma_itt = np.zeros((2,2,len(z_t),len(z_hat_t)))
     #This could be vectorized or whatever but i think itll be okay
@@ -172,13 +175,22 @@ def matching(z_hat_t,z_t,R_t,H_j,g_thresh,P_hat_t,g):
             mah_dist = v_.T @ sigma_ @ v_
             if mah_dist <= g**2:
                 matches.append([i,j])
-    return matches
+                v_t_matches.append(v_t[:,:,i,j])
+                sigmas_matches.append(sigma_itt[:,:,i,j])
+                H_matches.append(H_j[j])
+    return matches, v_t_matches, sigmas_matches,H_j
 
-def pos_estimation(K_matrixs, x_hat, v_t,):
+def pos_estimation(H_t, x_hat, v_t,P_t_hat,sigmas):
     
+    
+    for i in len(x_hat):
+        K_t = P_t_hat[i] @ H_t[i].T @ np.linalg.pinv(sigmas[i])
+        P_t = P_t_hat[i] - K_t @ sigmas[i] @ K_t.T
+        x_t = x_hat + K_t @ v_t[i]
+        x_hat = x_t
 
 
-    return
+    return x_t, P_t
 """
 find our estimated covarience of the fitted lines.
 We assume the varience of angle and distance are calculated before hand and constant for each collects point.
