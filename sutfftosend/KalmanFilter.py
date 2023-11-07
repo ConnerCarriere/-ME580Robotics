@@ -24,7 +24,6 @@ def CSV_Read_Lidar_data(data_path):
 
     return dataframe
 
-
 def covarience_line_fitting(points_in_line, line_alpha_rho, sigma_angle=0, sigma_dist=.005):
     sigma_angle = sigma_angle * np.ones(len(points_in_line))
     sigma_dist = sigma_dist * np.ones(len(points_in_line))
@@ -236,7 +235,6 @@ def Algorithm_split_and_merge(inputdataframe, threshold=0.3, plot=False):
 
     return final_lines, points_in_line, alpha_rho
 
-
 def matching(z_hat_t,z_t,R_t,H_j,P_hat_t,g):
 
     matches = []
@@ -270,18 +268,22 @@ def matching(z_hat_t,z_t,R_t,H_j,P_hat_t,g):
                 
     return matches, v_t_matches, sigmas_matches,H_matches
 
-
 def pos_estimation(H_t, x_hat, v_t,P_t_hat,sigmas):
-    print(f"H_t len {len(H_t)}")
+    # print(H_t)
+    # print(v_t)
+    # print(sigmas)
     for i in range(len(H_t)):
         K_t = P_t_hat @ H_t[i].T @ np.linalg.pinv(sigmas[i])
         P_t = P_t_hat - K_t @ sigmas[i] @ K_t.T
         x_t = x_hat + K_t @ v_t[i]
         x_hat = x_t
 
+        # print(x_t)
 
+    if range(len(H_t)) == 0:
+        x_t = x_hat
+        P_t = P_t_hat
     return x_t, P_t
-
 
 def measurement_prediction(x_hat, gt_map_df):
     """
@@ -306,159 +308,139 @@ def measurement_prediction(x_hat, gt_map_df):
 
     return z_hat_t,H_j
 
-
-# def observation(data):
-#     """
-#     the obsorvation step should spin the lidar, calculate and return the lines in the robot's frame (at timestep t)
-
-#     """
-#     N = len(data)
-#     z_t = np.zeros(2,1,N)  # z_t^i = [alpha_t^i, r_t^i]^T for 0<i<N lines
-#     R_t = np.zeros(2,2,N)
-
-#     z_t[0,1,:] = data.alphas 
-#     z_t[1,1,:] = data.rhos
-
-
-#     R_t = data.cov[:]
-
-#     return z_t,R_t
-
-
-def position_prediction(pos_t_minus1, delta_sl, delta_sr, b, k_r, k_l, F_k_minus_1, Q_t):
+def position_prediction(pos_t_minus1, delta_sl, delta_sr, b,P_t_minus1):
 
     delta_sl
     delta_sr
     theta_t_minus1 = pos_t_minus1[2]
-     
+  
     x_hat = np.empty((3,1))
 
     # This is previous postion + estimate of future position
-    x_hat = pos_t_minus1 + np.array([[(delta_sr+delta_sl)/2*math.cos(theta_t_minus1+(delta_sr-delta_sl)/2/b)],
-                                    [(delta_sr+delta_sl)/2*math.sin(theta_t_minus1+(delta_sr-delta_sl)/2/b)],
-                                    [(delta_sr-delta_sl)/b]])
+    x_hat = pos_t_minus1 + np.array([[(delta_sr+delta_sl) / 2 * math.cos(theta_t_minus1 + (delta_sr-delta_sl) / 2 / b)],
+                                    [(delta_sr+delta_sl) / 2 * math.sin(theta_t_minus1 + (delta_sr-delta_sl) / 2 / b)],
+                                    [(delta_sr-delta_sl) / b]])
     
-    # covarieance of the previouse robot state
-    P_t_minus1 = np.array([[k_r*abs(delta_sr), 0,0],
-                           [0,k_l*abs(delta_sl),0 ],
-                           [0,0,1 ]])
-    
-    # @ is matrix multiplication
-    P_hat_t = F_k_minus_1 @ P_t_minus1 @ F_k_minus_1.T + Q_t 
-    return x_hat, P_hat_t
+    delta_s = (delta_sr+delta_sl)/2
+    delta_theta = (delta_sr-delta_sl) / b
 
-
-
-'''~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'''
-'''~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'''
-'''~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'''
-'''~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'''
-data_captures = ['sutfftosend/DownstairsdataScan2.csv','sutfftosend/DownstairsdataScan3.csv','sutfftosend/DownstairsdataScan4.csv']
-for stuffandthings in range(3):
-
-    # # Initializing map
-    # 
-
-
-    # Ground Truth Map Generation
-    # Load datapath and put into dataframe
-    # path to csv data
-    data_path = 'sutfftosend/DownstairsGTdata.csv'
-    gt_map_df = CSV_Read_Lidar_data(data_path)
-    gt_map_df = gt_map_df.astype(float)
-
-    # Delete any column that has an inf in the rho spot
-    inf_cols = gt_map_df.loc['Rho'][np.isfinite(gt_map_df.loc['Rho'])]
-    gt_map_df = gt_map_df[inf_cols.index].transpose().reset_index(drop=True)
-
-
-    # # Plot the ground truth data
-    # plt.figure()
-    # plt.scatter(gt_map_df['X'], gt_map_df['Y'], s=1)
-    # plt.show()
-
-
-    # apply the split and merge algorithm
-    Lines, points_in_line, line_alpha_rho = Algorithm_split_and_merge(gt_map_df.astype(float),threshold=0.1, plot=False)
-
-    # Do covarience line fitting, save data to lists
-    alphas = []
-    rhos = []
-    covars = []
-    for i in range(len(points_in_line)):
-        rho, alpha, C_l = covarience_line_fitting(points_in_line[i], line_alpha_rho[i])
-        # line_info.append([alpha, rho, C_l])
-        alphas.append(alpha)
-        rhos.append(rho)
-        covars.append(C_l)
-
-    # Create a dataframe with the good info
-    ground_truth_df = pd.DataFrame([alphas, rhos, covars, Lines, points_in_line], ['Alpha','rhos' ,'Covariance', 'Lines (endpoints)', ' Points within line'])
-    ground_truth_df
-
-
-    # # 1. Robot Position Prediction
-
-
-    # Some values that are global
-
-    # Parameters for the robot 
-    # TODO this will be pulled from ros later
-    x_vel = 0.75
-    y_vel = 0.0
-    z_vel = 0.0
-
-
-
-    b = .235 # distance between robots wheels (meters)
-    wheel_radius = 0.072 # radius of the actual wheel (meters)
-
-    """
-    These are the uncertainties in the are error constants representing the 
-    nondeterministic parameters of the motor drive and the wheel-floor interaction. Probably can be found in DOC or just tune for it
-    """
     k_r =  .001
     k_l =  .001
 
-    Q_t  = np.identity(3)
+    Q_t  = np.array([[k_r * abs(delta_sr), 0],
+                    [0, k_l * abs(delta_sl) ]])
+    F_deltarl = np.array([  [.5*math.cos(theta_t_minus1+delta_theta/2)-delta_s/2/b*math.sin(theta_t_minus1+delta_theta/2),.5*math.cos(theta_t_minus1+delta_theta/2)+delta_s/2/b*math.sin(theta_t_minus1+delta_theta/2)],
+                            [.5*math.sin(theta_t_minus1+delta_theta/2)-delta_s/2/b*math.cos(theta_t_minus1+delta_theta/2),.5*math.sin(theta_t_minus1+delta_theta/2)+delta_s/2/b*math.cos(theta_t_minus1+delta_theta/2)],
+                            [1/b,-1/b]])
 
-
-    # Pull these from ros, page 337, displacewmnt of left and right wheel
-    # ut = [delta_sl, delta_sr].T
-    #TODO these are placeholder values
-    delta_sl = 1.0
-    delta_sr = 1.0
-
-
-    # pos_t_minus1 is the [x_t-1, y_t-1, theta_t-1] position of the robot x_t-1
-    # the robot drives forward with the control input ut (above) to a position vector xt
-    # Both are world frames
-    #TODO get a value for this
-    pos_t_minus1 = np.array([[0],
-                            [0],
-                            [0]])
-
-    #TODO idk wtf this is
-    F_k_minus_1 = np.identity(3)
-
-
-    x_hat, P_hat_t = position_prediction(pos_t_minus1, delta_sl, delta_sr, b, k_r, k_l, F_k_minus_1, Q_t)
-    # print(x_hat)
-    # print(P_hat_t)
-
-
-    # # 2. Observation
-
- 
-    # Load datapath and put into dataframe
-
+    F_k_minus_1 = np.array([[1, 0, -delta_s*math.sin(theta_t_minus1+delta_theta/2)],
+                            [0, 1,  delta_s*math.cos(theta_t_minus1+delta_theta/2)],
+                            [0, 0, 1]])
     
+    #TODO PUT IN THE FU MATRICXZ
+    # @ is matrix multiplication
+    P_hat_t = F_k_minus_1 @ P_t_minus1 @ F_k_minus_1.T + F_deltarl@ Q_t @ F_deltarl.T
+    return x_hat, P_hat_t
 
 
-    # path to csv data
-    data_path = data_captures[stuffandthings]
-    scan_df = CSV_Read_Lidar_data(data_path)
-    scan_df = scan_df.astype(float)
+# # Initializing map
+# 
+
+# Ground Truth Map Generation
+
+
+# Load datapath and put into dataframe
+# path to csv data
+data_path = 'sutfftosend/Hallway_Lidar_data_dinosars2_GT.csv'
+gt_map_df = CSV_Read_Lidar_data(data_path)
+gt_map_df = gt_map_df.astype(float)
+
+# Delete any column that has an inf in the rho spot
+inf_cols = gt_map_df.loc['Rho'][np.isfinite(gt_map_df.loc['Rho'])]
+gt_map_df = gt_map_df[inf_cols.index].transpose().reset_index(drop=True)
+
+
+# # Plot the ground truth data
+# plt.figure()
+# plt.scatter(gt_map_df['X'], gt_map_df['Y'], s=1)
+# plt.show()
+
+
+# apply the split and merge algorithm
+Lines, points_in_line, line_alpha_rho = Algorithm_split_and_merge(gt_map_df.astype(float),threshold=0.1, plot=False)
+
+# Do covarience line fitting, save data to lists
+alphas = []
+rhos = []
+covars = []
+for i in range(len(points_in_line)):
+    rho, alpha, C_l = covarience_line_fitting(points_in_line[i], line_alpha_rho[i])
+    # line_info.append([alpha, rho, C_l])
+    alphas.append(alpha)
+    rhos.append(rho)
+    covars.append(C_l)
+
+# Create a dataframe with the good info
+ground_truth_df = pd.DataFrame([alphas, rhos, covars, Lines, points_in_line], ['Alpha','rhos' ,'Covariance', 'Lines (endpoints)', ' Points within line'])
+ground_truth_df
+
+
+# 1. Robot Position Prediction
+# Some values that are global
+
+# Parameters for the robot 
+# TODO this will be pulled from ros later
+x_vel = 0.75
+y_vel = 0.0
+z_vel = 0.0
+
+
+
+b = .235 # distance between robots wheels (meters)
+wheel_radius = 0.072 # radius of the actual wheel (meters)
+
+"""
+These are the uncertainties in the are error constants representing the 
+nondeterministic parameters of the motor drive and the wheel-floor interaction. Probably can be found in DOC or just tune for it
+"""
+
+# Pull these from ros, page 337, displacewmnt of left and right wheel
+# ut = [delta_sl, delta_sr].T
+#TODO these are placeholder values
+delta_sl = 1.0
+delta_sr = 1.0
+
+
+# pos_t_minus1 is the [x_t-1, y_t-1, theta_t-1] position of the robot x_t-1
+# the robot drives forward with the control input ut (above) to a position vector xt
+# Both are world frames
+#TODO get a value for this
+pos_t_minus1 = np.array([[0],
+                         [0],
+                         [0]])
+# initialize covarience matrix TODO intiialize this beter
+P_t_minus1 = np.array([[.01,0,0],
+                       [0,.01,0],
+                       [0,0,.01]])
+
+
+x_hat, P_hat_t = position_prediction(pos_t_minus1, delta_sl, delta_sr, b,P_t_minus1)
+# print(x_hat)
+# print(P_hat_t)
+
+
+# # 2. Observation
+
+
+# Load datapath and put into dataframe
+# path to csv data
+data_path = 'sutfftosend/Hallway_Lidar_data_dinosars2.csv'
+scan_df = CSV_Read_Lidar_data(data_path)
+scan_df = scan_df.astype(float)
+print(scan_df)
+
+for things in range(4):
+    
 
     # Delete any column that has an inf in the rho spot
     inf_cols = scan_df.loc['Rho'][np.isfinite(scan_df.loc['Rho'])]
@@ -485,7 +467,7 @@ for stuffandthings in range(3):
     all_scan_df = pd.DataFrame([alphas, rhos, covars, Lines, points_in_line], ['Alpha','rhos' ,'Covariance', 'Lines (endpoints)', ' Points within line'])
     all_scan_df
 
- 
+
     # alpha and rho from the lidar data
     z_t = np.array([[all_scan_df.loc['Alpha'].astype(float)],
                 [all_scan_df.loc['rhos'].astype(float)]])
@@ -505,21 +487,24 @@ for stuffandthings in range(3):
 
     # # 4. Matching
 
- 
+
     #TODO what is g
-    g = .5 # mess with this a bit
+    g = .3 # mess with this a bit
 
     matches, v_t_matches, sigmas_matches, H_j = matching(z_hat_t, z_t, R_t, H_j, P_hat_t, g)
+    H_j
+    sigmas_matches
 
-  
+
     # # 5. Estimation
 
-   
+
     x_t, P_t = pos_estimation(H_j, x_hat, v_t_matches, P_hat_t, sigmas_matches)
 
-    print(f"x_t = {x_t}")
-    print(f"P_t = {P_t}")
+    P_t_minus1 = P_t
+    pos_t_minus1 = x_t
+    print(x_t)
+    print(x_hat)
 
 
 
-# %%
