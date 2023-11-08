@@ -1,7 +1,3 @@
-
-# # Kalman Filter 
-
-
 # include libraries
 import numpy as np
 import math
