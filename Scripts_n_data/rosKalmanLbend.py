@@ -381,7 +381,7 @@ def measurement_prediction(x_hat, gt_map_df):
 
     return z_hat_t,H_j
 
-def position_prediction(pos_t_minus1, delta_sl, delta_sr, b,P_t_minus1):
+def position_prediction_odom(pos_t_minus1, delta_sl, delta_sr, b,P_t_minus1):
 
     delta_sl
     delta_sr
@@ -419,7 +419,50 @@ def position_prediction(pos_t_minus1, delta_sl, delta_sr, b,P_t_minus1):
     P_hat_t = F_k_minus_1 @ P_t_minus1_2 @ F_k_minus_1.T + F_deltarl@ Q_t @ F_deltarl.T
     # pos_t_minus1 = x_hat
     return x_hat, P_hat_t
+def position_prediction(pos_t_minus1, delta_x, delta_y,delta_theta, b,P_t_minus1):
 
+
+    
+
+    theta_t_minus1 = pos_t_minus1[2]
+  
+    x_hat = np.empty((3,1))
+
+    if math.cos(theta_t_minus1+delta_theta/2) != 0:
+        delta_s = delta_x/math.cos(theta_t_minus1+delta_theta/2) # Hand calc, divide by zero is possible but idk who cares
+    else:
+        delta_s = delta_y/math.sin(theta_t_minus1+delta_theta/2)
+
+    delta_sl = .5(-b*delta_theta + 2*delta_s)
+    delta_sr = .5(b*delta_theta + 2*delta_s)
+
+    # This is previous postion + estimate of future position
+    x_hat = np.add(pos_t_minus1, np.array([[delta_x],
+                                    [delta_y],
+                                    [delta_theta]]))
+    
+    delta_s = (delta_sr+delta_sl)/2
+   
+
+    k_r =  .001
+    k_l =  .001
+
+    Q_t  = np.array([[k_r * abs(delta_sr), 0],
+                    [0, k_l * abs(delta_sl) ]])
+    F_deltarl = np.array([  [.5*math.cos(theta_t_minus1+delta_theta/2)-delta_s/2/b*math.sin(theta_t_minus1+delta_theta/2),.5*math.cos(theta_t_minus1+delta_theta/2)+delta_s/2/b*math.sin(theta_t_minus1+delta_theta/2)],
+                            [.5*math.sin(theta_t_minus1+delta_theta/2)+delta_s/2/b*math.cos(theta_t_minus1+delta_theta/2),.5*math.sin(theta_t_minus1+delta_theta/2)-delta_s/2/b*math.cos(theta_t_minus1+delta_theta/2)],
+                            [1/b,-1/b]])
+
+    F_k_minus_1 = np.array([[1, 0, -delta_s*math.sin(theta_t_minus1+delta_theta/2)],
+                            [0, 1,  delta_s*math.cos(theta_t_minus1+delta_theta/2)],
+                            [0, 0, 1]])
+    
+    #TODO PUT IN THE FU MATRICXZ
+    # @ is matrix multiplication
+    P_t_minus1_2 = P_t_minus1 * np.identity(3)
+    P_hat_t = F_k_minus_1 @ P_t_minus1_2 @ F_k_minus_1.T + F_deltarl@ Q_t @ F_deltarl.T
+    # pos_t_minus1 = x_hat
+    return x_hat, P_hat_t
 class KalmanFilter:
 
     def __init__(self, g = 0.005, b = 0.235):
@@ -436,6 +479,8 @@ class KalmanFilter:
         self.P_t_minus1 = np.array([[10, 0, 0],
                                     [0, 10, 0],                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
                                     [0, 0, .9]])
+        
+    
 
     def kalman_observe(self, scan_df):
         Lines, points_in_line, line_alpha_rho = Algorithm_split_and_merge(scan_df.astype(float),threshold=0.1, plot=False)
@@ -461,13 +506,22 @@ class KalmanFilter:
         
         # Covariane matrix for eachlinec calculated
         self.R_t = np.array(all_scan_df.loc['Covariance'])
+    #TODO this telometry needs a better data storing method, oh well- honestly shouldnt matter when using real time anyway
+    def kalman_observe_tel(self, scan_number, robot_scan):
+        inputdataframe = robot_scan[0]
+        P = np.array([list(inputdataframe['0']), list(inputdataframe['1']),list(inputdataframe['5'])]).T
+        print(P)
+        # self.delta_x = P.[]
+        # self.delta_y = 
+        # self.delta_theta =
 
-    def kalman_update(self, delta_sl, delta_sr):
+    #if giving deltas in terms of left and right wheels
+    def kalman_update_odom(self, delta_sl, delta_sr):
         self.P_t_minus1 = self.P_t
         self.pos_t_minus1 = self.pos_t
 
-        self.x_hat, self.P_hat_t = position_prediction(self.pos_t_minus1, delta_sl, delta_sr, self.b, self.P_t_minus1)
-        print(self.x_hat)
+        self.x_hat, self.P_hat_t = position_prediction_odom(self.pos_t_minus1, delta_sl, delta_sr, self.b, self.P_t_minus1)
+        # print(self.x_hat)
         self.z_hat_t, self.H_j = measurement_prediction(self.x_hat, self.ground_truth_df)
         matches, v_t_matches, sigmas_matches, self.H_j = matching(self.z_hat_t, self.z_t, self.R_t, self.H_j, self.P_hat_t, self.g,helper=False, world_first=False)
 
@@ -486,11 +540,39 @@ class KalmanFilter:
         self.P_t = self.P_t
         self.pos_t = self.x_t
 
-        print(self.pos_t)
+        # print(self.pos_t)
 
         
         self.all_xt.append(self.x_t) # for plotting
+    #if giving deltas in terms of x, y and theta updates
+    def kalman_update(self, delta_x, delta_y, delta_theta):
+        self.P_t_minus1 = self.P_t
+        self.pos_t_minus1 = self.pos_t
 
+        self.x_hat, self.P_hat_t = position_prediction(self.pos_t_minus1, delta_x, delta_y,delta_theta, self.b, self.P_t_minus1)
+        # print(self.x_hat)
+        self.z_hat_t, self.H_j = measurement_prediction(self.x_hat, self.ground_truth_df)
+        matches, v_t_matches, sigmas_matches, self.H_j = matching(self.z_hat_t, self.z_t, self.R_t, self.H_j, self.P_hat_t, self.g,helper=False, world_first=False)
+
+        self.all_xhat.append(self.x_hat) #for plotting  
+
+        for i in range(len(self.H_j)):
+            self.x_t, self.P_t = pos_estimation_v2(self.H_j[i], self.x_hat, v_t_matches[i], self.P_hat_t, sigmas_matches[i])
+            # print(x_t-x_hat)
+            self.x_hat = self.x_t
+            self.P_hat_t = self.P_t
+
+        if len(self.H_j) < 1:
+            self.P_t = self.P_hat_t
+            self.x_t = self.x_hat
+            print('badmatches')
+        self.P_t = self.P_t
+        self.pos_t = self.x_t
+
+        # print(self.pos_t)
+
+        
+        self.all_xt.append(self.x_t) # for plotting
     def kalman_plot(self):
         plt.figure()
         plt.xlim(-1,2)
@@ -572,10 +654,12 @@ for robot_scans in range(len(scan_df)):
     #TODO pull in this from ROS
     delta_sl = 0.1
     delta_sr = 0.1
+    # print(scan_df[robot_scans])
 
     Kalman.kalman_observe(scan_df[robot_scans])
-    Kalman.kalman_update(delta_sl, delta_sr)
-    # print(Kalman.pos_t)
+    Kalman.kalman_observe_tel(robot_scans,scan_df)
+    Kalman.kalman_update_odom(delta_sl, delta_sr)
+    print(Kalman.pos_t)
 
 Kalman.kalman_plot()
 # plt.show()
