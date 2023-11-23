@@ -451,7 +451,7 @@ class KalmanFilter:
             rhos.append(rho)
             covars.append(C_l)
 
-        print(covars)
+        # print(covars)
         # Create a dataframe with the good info
         all_scan_df = pd.DataFrame([alphas, rhos, covars, Lines, points_in_line], ['Alpha','rhos' ,'Covariance', 'Lines (endpoints)', ' Points within line'])
 
@@ -467,6 +467,7 @@ class KalmanFilter:
         self.pos_t_minus1 = self.pos_t
 
         self.x_hat, self.P_hat_t = position_prediction(self.pos_t_minus1, delta_sl, delta_sr, self.b, self.P_t_minus1)
+        print(self.x_hat)
         self.z_hat_t, self.H_j = measurement_prediction(self.x_hat, self.ground_truth_df)
         matches, v_t_matches, sigmas_matches, self.H_j = matching(self.z_hat_t, self.z_t, self.R_t, self.H_j, self.P_hat_t, self.g,helper=False, world_first=False)
 
@@ -481,8 +482,9 @@ class KalmanFilter:
         if len(self.H_j) < 1:
             self.P_t = self.P_hat_t
             self.x_t = self.x_hat
-        self.P_t_minus1 = self.P_t
-        self.pos_t_minus1 = self.x_t
+            print('badmatches')
+        self.P_t = self.P_t
+        self.pos_t = self.x_t
 
         print(self.pos_t)
 
@@ -535,7 +537,7 @@ gt_endpoints = ground_truth_df.loc['Lines_(endpoints)']
 # plt.show()
 
 'Call the kalman ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-Kalman = KalmanFilter(g= 0.05)
+Kalman = KalmanFilter(g= 0.001)
 Kalman.initialize(ground_truth_df)
 
 'Load the Obsercation data ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
@@ -571,7 +573,7 @@ for robot_scans in range(len(scan_df)):
 
     Kalman.kalman_observe(scan_df[robot_scans])
     Kalman.kalman_update(delta_sl, delta_sr)
-    print(Kalman.pos_t)
+    # print(Kalman.pos_t)
 
 Kalman.kalman_plot()
 # plt.show()
