@@ -575,8 +575,8 @@ class KalmanFilter:
         self.all_xt.append(self.x_t) # for plotting
     def kalman_plot(self):
         plt.figure()
-        plt.xlim(-1,2)
-        plt.ylim(-1,1)
+        plt.xlim(-1,3)
+        plt.ylim(-1.5,1.5)
         color = []
         for i in range(len(self.all_xt)):
             
@@ -591,7 +591,7 @@ class KalmanFilter:
 # def main():
 'Load in ground truth data ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
 file_path = 'Scripts_n_data/Data_Readers_Writers/Data/'
-file_name = 'HallwayNew_GT_LineData'
+file_name = 'HallwayNewMovepoint1meter_GT_LineData'
 # file_name = 'Downstairsdata_GT_LineData'
 
 data_path = file_path + file_name + '.pkl'
@@ -619,7 +619,7 @@ gt_endpoints = ground_truth_df.loc['Lines_(endpoints)']
 # plt.show()
 
 'Call the kalman ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-Kalman = KalmanFilter(g= 0.004)
+Kalman = KalmanFilter(g= 0.01)
 Kalman.initialize(ground_truth_df)
 
 'Load the Obsercation data ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
@@ -656,14 +656,14 @@ delta_y = []
 delta_theta = []
 
 #Manually input positions
-for i in range(10):
+for i in range(30):
     delta_x.append(.1)
     delta_y.append(0)
     delta_theta.append(0)
-for i in range(18):
-    delta_x.append(0)
-    delta_y.append(0)
-    delta_theta.append(-math.pi/18/2)
+
+delta_x.append(0)
+delta_y.append(0)
+delta_theta.append(-math.pi/2)
 for i in range(10):
     delta_x.append(0)
     delta_y.append(-.1)

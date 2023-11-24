@@ -400,8 +400,8 @@ def position_prediction(pos_t_minus1, delta_sl, delta_sr, b,P_t_minus1):
     delta_s = (delta_sr+delta_sl)/2
     delta_theta = (delta_sr-delta_sl) / b
 
-    k_r =  .001
-    k_l =  .001
+    k_r =  .01
+    k_l =  .01
 
     Q_t  = np.array([[k_r * abs(delta_sr), 0],
                     [0, k_l * abs(delta_sl) ]])
@@ -425,7 +425,7 @@ class KalmanFilter:
     def __init__(self, g = 0.005, b = 0.235):
         self.g = g
         self.b = b # distance between robots wheels (meters)
-        self.P_t = np.array([[10, 0, 0], [0, 10, 0], [0, 0, .9]])
+        self.P_t = np.array([[1, 0, 0], [0, 1, 0], [0, 0, .3]])
         self.all_xt = [] #used for plotting
         self.all_xhat = [] #used for plotting
 
@@ -433,9 +433,9 @@ class KalmanFilter:
         self.pos_t_minus1 = np.array([[0],[0],[0]])     
         self.ground_truth_df = ground_truth_df
         self.pos_t = self.pos_t_minus1
-        self.P_t_minus1 = np.array([[10, 0, 0],
-                                    [0, 10, 0],                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
-                                    [0, 0, .9]])
+        # self.P_t_minus1 = np.array([[1, 0, 0],
+        #                             [0, 1, 0],                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+        #                             [0, 0, .3]])
 
     def kalman_observe(self, scan_df):
         Lines, points_in_line, line_alpha_rho = Algorithm_split_and_merge(scan_df.astype(float),threshold=0.1, plot=False)
@@ -521,17 +521,17 @@ ground_truth_df = ground_truth_df.T
 gt_endpoints = ground_truth_df.loc['Lines_(endpoints)']
 
 
-# If you wanty to plot it GT
+# # If you wanty to plot it GT
 # fig = plt.figure()
 # plt.title('map')
 # # ax = fig.add_subplot()
-# for i in range(max(ground_truth_df.shape)):
-#     # print(np.array(gt_endpoints[i]))
-#     apl = ground_truth_df.loc['Alpha'].astype(float)[i]
-#     rh = ground_truth_df.loc['rhos'].astype(float)[i]
-#     pts_2_plt = np.array(gt_endpoints[i])
+for i in range(15):
+    # print(np.array(gt_endpoints[i]))
+    apl = ground_truth_df.loc['Alpha'].astype(float)[i]
+    rh = ground_truth_df.loc['rhos'].astype(float)[i]
+    pts_2_plt = np.array(gt_endpoints[i])
 
-#     plt.plot(pts_2_plt[:, 0], pts_2_plt[:, 1],'-')
+# plt.plot(pts_2_plt[:, 0], pts_2_plt[:, 1],'-')
 #     plt.text((pts_2_plt[0, 0]+pts_2_plt[1, 0])/2,(pts_2_plt[0, 1]+pts_2_plt[1, 1])/2,'r = '+str(round(rh,3)) +'\n'+ ' a '+str(round(apl,3))+'\n'+ 'j'+str(i))
 # plt.scatter(0, 0, c='red')  # replace this with the origin point
 # plt.show()
@@ -574,6 +574,7 @@ for robot_scans in range(len(scan_df)):
     Kalman.kalman_observe(scan_df[robot_scans])
     Kalman.kalman_update(delta_sl, delta_sr)
     # print(Kalman.pos_t)
+# plt.plot(pts_2_plt[:, 0], pts_2_plt[:, 1],'-')
 
 Kalman.kalman_plot()
 # plt.show()
