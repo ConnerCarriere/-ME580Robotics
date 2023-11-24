@@ -433,8 +433,8 @@ def position_prediction(pos_t_minus1, delta_x, delta_y,delta_theta, b,P_t_minus1
     else:
         delta_s = delta_y/math.sin(theta_t_minus1+delta_theta/2)
 
-    delta_sl = .5(-b*delta_theta + 2*delta_s)
-    delta_sr = .5(b*delta_theta + 2*delta_s)
+    delta_sl = .5*(-b*delta_theta + 2*delta_s)
+    delta_sr = .5*(b*delta_theta + 2*delta_s)
 
     # This is previous postion + estimate of future position
     x_hat = np.add(pos_t_minus1, np.array([[delta_x],
@@ -510,11 +510,11 @@ class KalmanFilter:
     def kalman_observe_tel(self, scan_number, robot_scan):
         inputdataframe = robot_scan[0]
         P = np.array([list(inputdataframe['0']), list(inputdataframe['1']),list(inputdataframe['5'])]).T
-        print(P)
-        # self.delta_x = P.[]
-        # self.delta_y = 
-        # self.delta_theta =
-
+        # print(P)
+        self.delta_x = -P[scan_number,0] + P[0,0]
+        self.delta_y = -P[scan_number,1] + P[0,1]
+        self.delta_theta = -P[scan_number,2] + P[0,2]
+        print(self.delta_x,self.delta_y,self.delta_theta)
     #if giving deltas in terms of left and right wheels
     def kalman_update_odom(self, delta_sl, delta_sr):
         self.P_t_minus1 = self.P_t
@@ -619,7 +619,7 @@ gt_endpoints = ground_truth_df.loc['Lines_(endpoints)']
 # plt.show()
 
 'Call the kalman ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-Kalman = KalmanFilter(g= 0.001)
+Kalman = KalmanFilter(g= 0.004)
 Kalman.initialize(ground_truth_df)
 
 'Load the Obsercation data ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
@@ -650,15 +650,36 @@ for i in range(len(scan_df)):
 
 'Loop the kalman ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
 
-for robot_scans in range(len(scan_df)):
+
+delta_x = []
+delta_y = []
+delta_theta = []
+
+#Manually input positions
+for i in range(10):
+    delta_x.append(.1)
+    delta_y.append(0)
+    delta_theta.append(0)
+for i in range(18):
+    delta_x.append(0)
+    delta_y.append(0)
+    delta_theta.append(-math.pi/18/2)
+for i in range(10):
+    delta_x.append(0)
+    delta_y.append(-.1)
+    delta_theta.append(0)   
+
+
+for robot_scans in range(38):
     #TODO pull in this from ROS
-    delta_sl = 0.1
-    delta_sr = 0.1
+  
     # print(scan_df[robot_scans])
 
     Kalman.kalman_observe(scan_df[robot_scans])
-    Kalman.kalman_observe_tel(robot_scans,scan_df)
-    Kalman.kalman_update_odom(delta_sl, delta_sr)
+
+    # Kalman.kalman_observe_tel(robot_scans,scan_df) # The scanner is still f'd
+
+    Kalman.kalman_update(delta_x[robot_scans], delta_y[robot_scans],delta_theta[robot_scans])
     print(Kalman.pos_t)
 
 Kalman.kalman_plot()
