@@ -1,0 +1,101 @@
+[0.000000] (-) TimerEvent: {}
+[0.001432] (-) JobUnselected: {'identifier': 'Lab1_ConnerC_Package'}
+[0.002750] (-) JobUnselected: {'identifier': 'Lab1_DerrickS_Package'}
+[0.003555] (-) JobUnselected: {'identifier': 'turtlebot4_python_tutorials'}
+[0.005726] (-) JobUnselected: {'identifier': 'turtlebot4_python_tutorials_Conner_Carriere'}
+[0.005957] (Lab2_ConnerC_Package) JobQueued: {'identifier': 'Lab2_ConnerC_Package', 'dependencies': OrderedDict()}
+[0.006378] (Lab2_ConnerC_Package) JobStarted: {'identifier': 'Lab2_ConnerC_Package'}
+[0.099162] (-) TimerEvent: {}
+[0.200148] (-) TimerEvent: {}
+[0.300897] (-) TimerEvent: {}
+[0.401645] (-) TimerEvent: {}
+[0.502380] (-) TimerEvent: {}
+[0.603181] (-) TimerEvent: {}
+[0.703930] (-) TimerEvent: {}
+[0.805157] (-) TimerEvent: {}
+[0.906235] (-) TimerEvent: {}
+[1.007841] (-) TimerEvent: {}
+[1.108621] (-) TimerEvent: {}
+[1.209338] (-) TimerEvent: {}
+[1.310059] (-) TimerEvent: {}
+[1.410980] (-) TimerEvent: {}
+[1.511943] (-) TimerEvent: {}
+[1.612761] (-) TimerEvent: {}
+[1.713577] (-) TimerEvent: {}
+[1.814750] (-) TimerEvent: {}
+[1.915977] (-) TimerEvent: {}
+[2.016751] (-) TimerEvent: {}
+[2.117556] (-) TimerEvent: {}
+[2.218380] (-) TimerEvent: {}
+[2.319195] (-) TimerEvent: {}
+[2.420194] (-) TimerEvent: {}
+[2.520903] (-) TimerEvent: {}
+[2.621613] (-) TimerEvent: {}
+[2.722309] (-) TimerEvent: {}
+[2.823088] (-) TimerEvent: {}
+[2.923856] (-) TimerEvent: {}
+[3.024595] (-) TimerEvent: {}
+[3.125336] (-) TimerEvent: {}
+[3.226207] (-) TimerEvent: {}
+[3.327230] (-) TimerEvent: {}
+[3.428818] (-) TimerEvent: {}
+[3.483754] (Lab2_ConnerC_Package) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'develop', '--editable', '--build-directory', '/home/ubuntu/turtlebot4_ws/build/Lab2_ConnerC_Package/build', '--no-deps', 'install_data'], 'cwd': '/home/ubuntu/turtlebot4_ws/build/Lab2_ConnerC_Package', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'WORKSPACE_SETUP': '/opt/ros/humble/setup.bash', 'USER': 'ubuntu', 'SSH_CLIENT': '10.42.0.100 55148 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/ubuntu', 'CYCLONEDDS_URI': '/etc/turtlebot4/cyclonedds_rpi.xml', 'OLDPWD': '/home/ubuntu', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/ubuntu/turtlebot4_ws/install', 'ROBOT_SETUP': '/etc/turtlebot4/setup.bash', 'ROS_DISTRO': 'humble', 'LOGNAME': 'ubuntu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'FASTRTPS_DEFAULT_PROFILES_FILE': '/etc/turtlebot4/fastdds_rpi.xml', 'TURTLEBOT4_DIAGNOSTICS': '1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'C.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere:/home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials:/opt/ros/humble', 'SHELL': '/bin/bash', 'ROS_DISCOVERY_SERVER': '', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROBOT_NAMESPACE': '', 'PWD': '/home/ubuntu/turtlebot4_ws/build/Lab2_ConnerC_Package', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '10.42.0.100 55148 10.42.0.1 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ubuntu/turtlebot4_ws/build/Lab2_ConnerC_Package/prefix_override:/home/ubuntu/turtlebot4_ws/install/Lab2_ConnerC_Package/lib/python3.10/site-packages:/home/ubuntu/turtlebot4_ws/build/turtlebot4_python_tutorials_Conner_Carriere:/home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere/lib/python3.10/site-packages:/home/ubuntu/turtlebot4_ws/build/turtlebot4_python_tutorials:/home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[3.528997] (-) TimerEvent: {}
+[3.629854] (-) TimerEvent: {}
+[3.730721] (-) TimerEvent: {}
+[3.831641] (-) TimerEvent: {}
+[3.932451] (-) TimerEvent: {}
+[4.033145] (-) TimerEvent: {}
+[4.133953] (-) TimerEvent: {}
+[4.234683] (-) TimerEvent: {}
+[4.335345] (-) TimerEvent: {}
+[4.436143] (-) TimerEvent: {}
+[4.536947] (-) TimerEvent: {}
+[4.637713] (-) TimerEvent: {}
+[4.738442] (-) TimerEvent: {}
+[4.778806] (Lab2_ConnerC_Package) StdoutLine: {'line': b'running develop\n'}
+[4.783422] (Lab2_ConnerC_Package) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.\n'}
+[4.784297] (Lab2_ConnerC_Package) StderrLine: {'line': b'  warnings.warn(\n'}
+[4.791006] (Lab2_ConnerC_Package) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[4.791762] (Lab2_ConnerC_Package) StderrLine: {'line': b'  warnings.warn(\n'}
+[4.838619] (-) TimerEvent: {}
+[4.939359] (-) TimerEvent: {}
+[5.040078] (-) TimerEvent: {}
+[5.093670] (Lab2_ConnerC_Package) StderrLine: {'line': b'/usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.16.0-unknown is an invalid version and will not be supported in a future release\n'}
+[5.094452] (Lab2_ConnerC_Package) StderrLine: {'line': b'  warnings.warn(\n'}
+[5.095303] (Lab2_ConnerC_Package) StderrLine: {'line': b'/usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.1build1 is an invalid version and will not be supported in a future release\n'}
+[5.095927] (Lab2_ConnerC_Package) StderrLine: {'line': b'  warnings.warn(\n'}
+[5.096622] (Lab2_ConnerC_Package) StderrLine: {'line': b'/usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 0.1.43ubuntu1 is an invalid version and will not be supported in a future release\n'}
+[5.097350] (Lab2_ConnerC_Package) StderrLine: {'line': b'  warnings.warn(\n'}
+[5.140270] (-) TimerEvent: {}
+[5.241772] (-) TimerEvent: {}
+[5.342815] (-) TimerEvent: {}
+[5.443921] (-) TimerEvent: {}
+[5.544668] (-) TimerEvent: {}
+[5.645346] (-) TimerEvent: {}
+[5.655239] (Lab2_ConnerC_Package) StdoutLine: {'line': b'running egg_info\n'}
+[5.655883] (Lab2_ConnerC_Package) StdoutLine: {'line': b'creating Lab2_ConnerC_Package.egg-info\n'}
+[5.656633] (Lab2_ConnerC_Package) StdoutLine: {'line': b'writing Lab2_ConnerC_Package.egg-info/PKG-INFO\n'}
+[5.657714] (Lab2_ConnerC_Package) StdoutLine: {'line': b'writing dependency_links to Lab2_ConnerC_Package.egg-info/dependency_links.txt\n'}
+[5.658569] (Lab2_ConnerC_Package) StdoutLine: {'line': b'writing entry points to Lab2_ConnerC_Package.egg-info/entry_points.txt\n'}
+[5.659198] (Lab2_ConnerC_Package) StdoutLine: {'line': b'writing requirements to Lab2_ConnerC_Package.egg-info/requires.txt\n'}
+[5.659747] (Lab2_ConnerC_Package) StdoutLine: {'line': b'writing top-level names to Lab2_ConnerC_Package.egg-info/top_level.txt\n'}
+[5.660623] (Lab2_ConnerC_Package) StdoutLine: {'line': b"writing manifest file 'Lab2_ConnerC_Package.egg-info/SOURCES.txt'\n"}
+[5.668200] (Lab2_ConnerC_Package) StdoutLine: {'line': b"reading manifest file 'Lab2_ConnerC_Package.egg-info/SOURCES.txt'\n"}
+[5.671156] (Lab2_ConnerC_Package) StdoutLine: {'line': b"writing manifest file 'Lab2_ConnerC_Package.egg-info/SOURCES.txt'\n"}
+[5.677746] (Lab2_ConnerC_Package) StdoutLine: {'line': b'running build_ext\n'}
+[5.678707] (Lab2_ConnerC_Package) StdoutLine: {'line': b'Creating /home/ubuntu/turtlebot4_ws/install/Lab2_ConnerC_Package/lib/python3.10/site-packages/Lab2-ConnerC-Package.egg-link (link to .)\n'}
+[5.683196] (Lab2_ConnerC_Package) StdoutLine: {'line': b'Installing LidarListen script to /home/ubuntu/turtlebot4_ws/install/Lab2_ConnerC_Package/lib/Lab2_ConnerC_Package\n'}
+[5.684922] (Lab2_ConnerC_Package) StdoutLine: {'line': b'\n'}
+[5.685791] (Lab2_ConnerC_Package) StdoutLine: {'line': b'Installed /home/ubuntu/turtlebot4_ws/build/Lab2_ConnerC_Package\n'}
+[5.691511] (Lab2_ConnerC_Package) StdoutLine: {'line': b'running install_data\n'}
+[5.692552] (Lab2_ConnerC_Package) StdoutLine: {'line': b'creating /home/ubuntu/turtlebot4_ws/install/Lab2_ConnerC_Package/share/ament_index\n'}
+[5.693807] (Lab2_ConnerC_Package) StdoutLine: {'line': b'creating /home/ubuntu/turtlebot4_ws/install/Lab2_ConnerC_Package/share/ament_index/resource_index\n'}
+[5.694898] (Lab2_ConnerC_Package) StdoutLine: {'line': b'creating /home/ubuntu/turtlebot4_ws/install/Lab2_ConnerC_Package/share/ament_index/resource_index/packages\n'}
+[5.696055] (Lab2_ConnerC_Package) StdoutLine: {'line': b'copying resource/Lab2_ConnerC_Package -> /home/ubuntu/turtlebot4_ws/install/Lab2_ConnerC_Package/share/ament_index/resource_index/packages\n'}
+[5.703627] (Lab2_ConnerC_Package) StdoutLine: {'line': b'copying package.xml -> /home/ubuntu/turtlebot4_ws/install/Lab2_ConnerC_Package/share/Lab2_ConnerC_Package\n'}
+[5.745720] (-) TimerEvent: {}
+[5.840383] (Lab2_ConnerC_Package) CommandEnded: {'returncode': 0}
+[5.848015] (-) TimerEvent: {}
+[5.938447] (Lab2_ConnerC_Package) JobEnded: {'identifier': 'Lab2_ConnerC_Package', 'rc': 0}
+[5.942428] (-) EventReactorShutdown: {}

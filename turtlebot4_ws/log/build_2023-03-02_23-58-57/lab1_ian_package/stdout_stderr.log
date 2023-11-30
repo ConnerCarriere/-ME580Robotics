@@ -1,0 +1,32 @@
+running develop
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+/usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.16.0-unknown is an invalid version and will not be supported in a future release
+  warnings.warn(
+/usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.1build1 is an invalid version and will not be supported in a future release
+  warnings.warn(
+/usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 0.1.43ubuntu1 is an invalid version and will not be supported in a future release
+  warnings.warn(
+running egg_info
+creating lab1_ian_package.egg-info
+writing lab1_ian_package.egg-info/PKG-INFO
+writing dependency_links to lab1_ian_package.egg-info/dependency_links.txt
+writing entry points to lab1_ian_package.egg-info/entry_points.txt
+writing requirements to lab1_ian_package.egg-info/requires.txt
+writing top-level names to lab1_ian_package.egg-info/top_level.txt
+writing manifest file 'lab1_ian_package.egg-info/SOURCES.txt'
+reading manifest file 'lab1_ian_package.egg-info/SOURCES.txt'
+writing manifest file 'lab1_ian_package.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/ubuntu/turtlebot4_ws/install/lab1_ian_package/lib/python3.10/site-packages/lab1-ian-package.egg-link (link to .)
+Installing lab1_ian_node script to /home/ubuntu/turtlebot4_ws/install/lab1_ian_package/lib/lab1_ian_package
+
+Installed /home/ubuntu/turtlebot4_ws/build/lab1_ian_package
+running install_data
+creating /home/ubuntu/turtlebot4_ws/install/lab1_ian_package/share/ament_index
+creating /home/ubuntu/turtlebot4_ws/install/lab1_ian_package/share/ament_index/resource_index
+creating /home/ubuntu/turtlebot4_ws/install/lab1_ian_package/share/ament_index/resource_index/packages
+copying resource/lab1_ian_package -> /home/ubuntu/turtlebot4_ws/install/lab1_ian_package/share/ament_index/resource_index/packages
+copying package.xml -> /home/ubuntu/turtlebot4_ws/install/lab1_ian_package/share/lab1_ian_package

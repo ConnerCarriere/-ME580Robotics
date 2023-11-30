@@ -1,0 +1,5 @@
+[console_scripts]
+turtlebot4_first_python_node = turtlebot4_python_tutorials_Conner_Carriere.turtlebot4_first_python_node:main
+turtlebot4_undock_node = turtlebot4_python_tutorials_Conner_Carriere.turtlebot4_undock_node:main
+turtlebot4_wander_node = turtlebot4_python_tutorials_Conner_Carriere.wander_node:main
+

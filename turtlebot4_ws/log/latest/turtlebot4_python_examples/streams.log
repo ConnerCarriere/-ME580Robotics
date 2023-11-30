@@ -1,0 +1,36 @@
+[3.867s] Invoking command in '/home/ubuntu/turtlebot4_ws/build/turtlebot4_python_examples': PYTHONPATH=/home/ubuntu/turtlebot4_ws/build/turtlebot4_python_examples/prefix_override:/home/ubuntu/turtlebot4_ws/install/turtlebot4_python_examples/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ubuntu/turtlebot4_ws/build/turtlebot4_python_examples/build --no-deps install_data
+[5.492s] running develop
+[5.497s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[5.498s]   warnings.warn(
+[5.517s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[5.518s]   warnings.warn(
+[5.882s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.16.0-unknown is an invalid version and will not be supported in a future release
+[5.883s]   warnings.warn(
+[5.884s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.1build1 is an invalid version and will not be supported in a future release
+[5.885s]   warnings.warn(
+[5.885s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 0.1.43ubuntu1 is an invalid version and will not be supported in a future release
+[5.886s]   warnings.warn(
+[6.860s] running egg_info
+[6.863s] creating turtlebot4_python_examples.egg-info
+[6.863s] writing turtlebot4_python_examples.egg-info/PKG-INFO
+[6.864s] writing dependency_links to turtlebot4_python_examples.egg-info/dependency_links.txt
+[6.864s] writing entry points to turtlebot4_python_examples.egg-info/entry_points.txt
+[6.865s] writing requirements to turtlebot4_python_examples.egg-info/requires.txt
+[6.866s] writing top-level names to turtlebot4_python_examples.egg-info/top_level.txt
+[6.872s] writing manifest file 'turtlebot4_python_examples.egg-info/SOURCES.txt'
+[6.872s] reading manifest file 'turtlebot4_python_examples.egg-info/SOURCES.txt'
+[6.874s] writing manifest file 'turtlebot4_python_examples.egg-info/SOURCES.txt'
+[6.882s] running build_ext
+[6.883s] Creating /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_examples/lib/python3.10/site-packages/turtlebot4-python-examples.egg-link (link to .)
+[6.888s] Installing followbot script to /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_examples/lib/turtlebot4_python_examples
+[6.894s] 
+[6.894s] Installed /home/ubuntu/turtlebot4_ws/build/turtlebot4_python_examples
+[6.895s] running install_data
+[6.896s] creating /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_examples/share/ament_index
+[6.897s] creating /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_examples/share/ament_index/resource_index
+[6.898s] creating /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_examples/share/ament_index/resource_index/packages
+[6.898s] copying resource/turtlebot4_python_examples -> /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_examples/share/ament_index/resource_index/packages
+[6.899s] copying package.xml -> /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_examples/share/turtlebot4_python_examples
+[6.900s] creating /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_examples/share/turtlebot4_python_examples/launch
+[6.901s] copying launch/followbot.launch.py -> /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_examples/share/turtlebot4_python_examples/launch
+[7.094s] Invoked command in '/home/ubuntu/turtlebot4_ws/build/turtlebot4_python_examples' returned '0': PYTHONPATH=/home/ubuntu/turtlebot4_ws/build/turtlebot4_python_examples/prefix_override:/home/ubuntu/turtlebot4_ws/install/turtlebot4_python_examples/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ubuntu/turtlebot4_ws/build/turtlebot4_python_examples/build --no-deps install_data

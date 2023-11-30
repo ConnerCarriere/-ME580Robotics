@@ -1,0 +1,3 @@
+[console_scripts]
+ianp_lidar_node = ianp_lidar_lab.ianp_lidar_node:main
+

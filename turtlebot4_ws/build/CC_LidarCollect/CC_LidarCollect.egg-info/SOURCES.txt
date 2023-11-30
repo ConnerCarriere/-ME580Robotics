@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+CC_LidarCollect/LidarCollect.py
+CC_LidarCollect/__init__.py
+CC_LidarCollect.egg-info/PKG-INFO
+CC_LidarCollect.egg-info/SOURCES.txt
+CC_LidarCollect.egg-info/dependency_links.txt
+CC_LidarCollect.egg-info/entry_points.txt
+CC_LidarCollect.egg-info/requires.txt
+CC_LidarCollect.egg-info/top_level.txt
+CC_LidarCollect.egg-info/zip-safe
+resource/CC_LidarCollect

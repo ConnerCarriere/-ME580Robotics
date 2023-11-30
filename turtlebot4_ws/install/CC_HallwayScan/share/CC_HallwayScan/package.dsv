@@ -1,0 +1,9 @@
+source;share/CC_HallwayScan/hook/pythonpath.ps1
+source;share/CC_HallwayScan/hook/pythonpath.dsv
+source;share/CC_HallwayScan/hook/pythonpath.sh
+source;share/CC_HallwayScan/hook/ament_prefix_path.ps1
+source;share/CC_HallwayScan/hook/ament_prefix_path.dsv
+source;share/CC_HallwayScan/hook/ament_prefix_path.sh
+source;../../build/CC_HallwayScan/share/CC_HallwayScan/hook/pythonpath_develop.ps1
+source;../../build/CC_HallwayScan/share/CC_HallwayScan/hook/pythonpath_develop.dsv
+source;../../build/CC_HallwayScan/share/CC_HallwayScan/hook/pythonpath_develop.sh

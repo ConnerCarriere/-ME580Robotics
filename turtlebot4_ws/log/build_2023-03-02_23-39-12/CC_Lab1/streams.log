@@ -1,0 +1,34 @@
+[3.370s] Invoking command in '/home/ubuntu/turtlebot4_ws/build/CC_Lab1': PYTHONPATH=/home/ubuntu/turtlebot4_ws/build/CC_Lab1/prefix_override:/home/ubuntu/turtlebot4_ws/install/CC_Lab1/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ubuntu/turtlebot4_ws/build/CC_Lab1/build --no-deps install_data
+[4.695s] running develop
+[4.699s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[4.699s]   warnings.warn(
+[4.704s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[4.705s]   warnings.warn(
+[5.014s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.16.0-unknown is an invalid version and will not be supported in a future release
+[5.015s]   warnings.warn(
+[5.020s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.1build1 is an invalid version and will not be supported in a future release
+[5.020s]   warnings.warn(
+[5.021s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 0.1.43ubuntu1 is an invalid version and will not be supported in a future release
+[5.022s]   warnings.warn(
+[5.587s] running egg_info
+[5.588s] creating CC_Lab1.egg-info
+[5.588s] writing CC_Lab1.egg-info/PKG-INFO
+[5.590s] writing dependency_links to CC_Lab1.egg-info/dependency_links.txt
+[5.591s] writing entry points to CC_Lab1.egg-info/entry_points.txt
+[5.597s] writing requirements to CC_Lab1.egg-info/requires.txt
+[5.598s] writing top-level names to CC_Lab1.egg-info/top_level.txt
+[5.598s] writing manifest file 'CC_Lab1.egg-info/SOURCES.txt'
+[5.600s] reading manifest file 'CC_Lab1.egg-info/SOURCES.txt'
+[5.604s] writing manifest file 'CC_Lab1.egg-info/SOURCES.txt'
+[5.611s] running build_ext
+[5.612s] Creating /home/ubuntu/turtlebot4_ws/install/CC_Lab1/lib/python3.10/site-packages/CC-Lab1.egg-link (link to .)
+[5.617s] Installing CC_Lab1_wander script to /home/ubuntu/turtlebot4_ws/install/CC_Lab1/lib/CC_Lab1
+[5.618s] 
+[5.619s] Installed /home/ubuntu/turtlebot4_ws/build/CC_Lab1
+[5.620s] running install_data
+[5.620s] creating /home/ubuntu/turtlebot4_ws/install/CC_Lab1/share/ament_index
+[5.622s] creating /home/ubuntu/turtlebot4_ws/install/CC_Lab1/share/ament_index/resource_index
+[5.628s] creating /home/ubuntu/turtlebot4_ws/install/CC_Lab1/share/ament_index/resource_index/packages
+[5.629s] copying resource/CC_Lab1 -> /home/ubuntu/turtlebot4_ws/install/CC_Lab1/share/ament_index/resource_index/packages
+[5.631s] copying package.xml -> /home/ubuntu/turtlebot4_ws/install/CC_Lab1/share/CC_Lab1
+[5.782s] Invoked command in '/home/ubuntu/turtlebot4_ws/build/CC_Lab1' returned '0': PYTHONPATH=/home/ubuntu/turtlebot4_ws/build/CC_Lab1/prefix_override:/home/ubuntu/turtlebot4_ws/install/CC_Lab1/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ubuntu/turtlebot4_ws/build/CC_Lab1/build --no-deps install_data

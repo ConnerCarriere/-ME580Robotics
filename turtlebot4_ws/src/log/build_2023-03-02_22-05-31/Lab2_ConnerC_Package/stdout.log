@@ -1,0 +1,15 @@
+running develop
+running egg_info
+writing Lab2_ConnerC_Package.egg-info/PKG-INFO
+writing dependency_links to Lab2_ConnerC_Package.egg-info/dependency_links.txt
+writing entry points to Lab2_ConnerC_Package.egg-info/entry_points.txt
+writing requirements to Lab2_ConnerC_Package.egg-info/requires.txt
+writing top-level names to Lab2_ConnerC_Package.egg-info/top_level.txt
+reading manifest file 'Lab2_ConnerC_Package.egg-info/SOURCES.txt'
+writing manifest file 'Lab2_ConnerC_Package.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/ubuntu/turtlebot4_ws/src/install/Lab2_ConnerC_Package/lib/python3.10/site-packages/Lab2-ConnerC-Package.egg-link (link to .)
+Installing LidarListen script to /home/ubuntu/turtlebot4_ws/src/install/Lab2_ConnerC_Package/lib/Lab2_ConnerC_Package
+
+Installed /home/ubuntu/turtlebot4_ws/src/build/Lab2_ConnerC_Package
+running install_data

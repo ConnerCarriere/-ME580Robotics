@@ -1,0 +1,3 @@
+[console_scripts]
+LidarCollect = CC_LidarCollect.LidarCollect:main
+

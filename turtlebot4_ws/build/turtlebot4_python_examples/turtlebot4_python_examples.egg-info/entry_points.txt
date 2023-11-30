@@ -1,0 +1,3 @@
+[console_scripts]
+followbot = turtlebot4_python_examples.FollowBot.followbot:main
+

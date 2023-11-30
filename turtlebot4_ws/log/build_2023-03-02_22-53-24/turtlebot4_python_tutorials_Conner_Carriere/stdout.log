@@ -1,0 +1,22 @@
+running develop
+running egg_info
+creating turtlebot4_python_tutorials_Conner_Carriere.egg-info
+writing turtlebot4_python_tutorials_Conner_Carriere.egg-info/PKG-INFO
+writing dependency_links to turtlebot4_python_tutorials_Conner_Carriere.egg-info/dependency_links.txt
+writing entry points to turtlebot4_python_tutorials_Conner_Carriere.egg-info/entry_points.txt
+writing requirements to turtlebot4_python_tutorials_Conner_Carriere.egg-info/requires.txt
+writing top-level names to turtlebot4_python_tutorials_Conner_Carriere.egg-info/top_level.txt
+writing manifest file 'turtlebot4_python_tutorials_Conner_Carriere.egg-info/SOURCES.txt'
+reading manifest file 'turtlebot4_python_tutorials_Conner_Carriere.egg-info/SOURCES.txt'
+writing manifest file 'turtlebot4_python_tutorials_Conner_Carriere.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere/lib/python3.10/site-packages/turtlebot4-python-tutorials-Conner-Carriere.egg-link (link to .)
+Installing turtlebot4_first_python_node script to /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere/lib/turtlebot4_python_tutorials_Conner_Carriere
+Installing turtlebot4_undock_node script to /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere/lib/turtlebot4_python_tutorials_Conner_Carriere
+Installing turtlebot4_wander_node script to /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere/lib/turtlebot4_python_tutorials_Conner_Carriere
+
+Installed /home/ubuntu/turtlebot4_ws/build/turtlebot4_python_tutorials_Conner_Carriere
+running install_data
+creating /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere/share/ament_index
+creating /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere/share/ament_index/resource_index
+creating /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere/share/ament_index/resource_index/packages

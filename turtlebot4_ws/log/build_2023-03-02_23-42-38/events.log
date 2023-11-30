@@ -1,0 +1,8 @@
+[0.000000] (-) TimerEvent: {}
+[0.002037] (-) JobUnselected: {'identifier': 'CC_Lab1'}
+[0.004434] (-) JobUnselected: {'identifier': 'CC_Lab2'}
+[0.006408] (-) JobUnselected: {'identifier': 'Lab1_DerrickS_Package'}
+[0.007487] (-) JobUnselected: {'identifier': 'turtlebot4_python_tutorials'}
+[0.008383] (-) JobUnselected: {'identifier': 'turtlebot4_python_tutorials'}
+[0.009296] (-) JobUnselected: {'identifier': 'turtlebot4_python_tutorials'}
+[0.010311] (-) EventReactorShutdown: {}

@@ -1,0 +1,3 @@
+[console_scripts]
+LidarListen = Lab2_ConnerC_Package.LidarListen:main
+

@@ -1,0 +1,34 @@
+[3.741s] Invoking command in '/home/ubuntu/turtlebot4_ws/build/CC_HallwayScan': PYTHONPATH=/home/ubuntu/turtlebot4_ws/build/CC_HallwayScan/prefix_override:/home/ubuntu/turtlebot4_ws/install/CC_HallwayScan/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ubuntu/turtlebot4_ws/build/CC_HallwayScan/build --no-deps install_data
+[5.172s] running develop
+[5.177s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[5.178s]   warnings.warn(
+[5.191s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[5.193s]   warnings.warn(
+[5.534s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.16.0-unknown is an invalid version and will not be supported in a future release
+[5.535s]   warnings.warn(
+[5.536s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.1build1 is an invalid version and will not be supported in a future release
+[5.537s]   warnings.warn(
+[5.537s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 0.1.43ubuntu1 is an invalid version and will not be supported in a future release
+[5.537s]   warnings.warn(
+[6.172s] running egg_info
+[6.172s] creating CC_HallwayScan.egg-info
+[6.176s] writing CC_HallwayScan.egg-info/PKG-INFO
+[6.177s] writing dependency_links to CC_HallwayScan.egg-info/dependency_links.txt
+[6.177s] writing entry points to CC_HallwayScan.egg-info/entry_points.txt
+[6.178s] writing requirements to CC_HallwayScan.egg-info/requires.txt
+[6.178s] writing top-level names to CC_HallwayScan.egg-info/top_level.txt
+[6.178s] writing manifest file 'CC_HallwayScan.egg-info/SOURCES.txt'
+[6.185s] reading manifest file 'CC_HallwayScan.egg-info/SOURCES.txt'
+[6.188s] writing manifest file 'CC_HallwayScan.egg-info/SOURCES.txt'
+[6.196s] running build_ext
+[6.200s] Creating /home/ubuntu/turtlebot4_ws/install/CC_HallwayScan/lib/python3.10/site-packages/CC-HallwayScan.egg-link (link to .)
+[6.204s] Installing HallwayScan script to /home/ubuntu/turtlebot4_ws/install/CC_HallwayScan/lib/CC_HallwayScan
+[6.207s] 
+[6.209s] Installed /home/ubuntu/turtlebot4_ws/build/CC_HallwayScan
+[6.212s] running install_data
+[6.213s] creating /home/ubuntu/turtlebot4_ws/install/CC_HallwayScan/share/ament_index
+[6.216s] creating /home/ubuntu/turtlebot4_ws/install/CC_HallwayScan/share/ament_index/resource_index
+[6.218s] creating /home/ubuntu/turtlebot4_ws/install/CC_HallwayScan/share/ament_index/resource_index/packages
+[6.220s] copying resource/CC_HallwayScan -> /home/ubuntu/turtlebot4_ws/install/CC_HallwayScan/share/ament_index/resource_index/packages
+[6.222s] copying package.xml -> /home/ubuntu/turtlebot4_ws/install/CC_HallwayScan/share/CC_HallwayScan
+[6.367s] Invoked command in '/home/ubuntu/turtlebot4_ws/build/CC_HallwayScan' returned '0': PYTHONPATH=/home/ubuntu/turtlebot4_ws/build/CC_HallwayScan/prefix_override:/home/ubuntu/turtlebot4_ws/install/CC_HallwayScan/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ubuntu/turtlebot4_ws/build/CC_HallwayScan/build --no-deps install_data

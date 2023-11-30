@@ -1,0 +1,34 @@
+[3.551s] Invoking command in '/home/ubuntu/turtlebot4_ws/build/CC_LidarCollect': PYTHONPATH=/home/ubuntu/turtlebot4_ws/build/CC_LidarCollect/prefix_override:/home/ubuntu/turtlebot4_ws/install/CC_LidarCollect/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ubuntu/turtlebot4_ws/build/CC_LidarCollect/build --no-deps install_data
+[4.990s] running develop
+[4.994s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[4.994s]   warnings.warn(
+[4.999s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[5.000s]   warnings.warn(
+[5.339s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.16.0-unknown is an invalid version and will not be supported in a future release
+[5.339s]   warnings.warn(
+[5.344s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.1build1 is an invalid version and will not be supported in a future release
+[5.344s]   warnings.warn(
+[5.345s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 0.1.43ubuntu1 is an invalid version and will not be supported in a future release
+[5.345s]   warnings.warn(
+[5.948s] running egg_info
+[5.953s] creating CC_LidarCollect.egg-info
+[5.958s] writing CC_LidarCollect.egg-info/PKG-INFO
+[5.959s] writing dependency_links to CC_LidarCollect.egg-info/dependency_links.txt
+[5.959s] writing entry points to CC_LidarCollect.egg-info/entry_points.txt
+[5.960s] writing requirements to CC_LidarCollect.egg-info/requires.txt
+[5.963s] writing top-level names to CC_LidarCollect.egg-info/top_level.txt
+[5.964s] writing manifest file 'CC_LidarCollect.egg-info/SOURCES.txt'
+[5.967s] reading manifest file 'CC_LidarCollect.egg-info/SOURCES.txt'
+[5.968s] writing manifest file 'CC_LidarCollect.egg-info/SOURCES.txt'
+[5.977s] running build_ext
+[5.978s] Creating /home/ubuntu/turtlebot4_ws/install/CC_LidarCollect/lib/python3.10/site-packages/CC-LidarCollect.egg-link (link to .)
+[5.978s] Installing LidarCollect script to /home/ubuntu/turtlebot4_ws/install/CC_LidarCollect/lib/CC_LidarCollect
+[5.980s] 
+[5.982s] Installed /home/ubuntu/turtlebot4_ws/build/CC_LidarCollect
+[5.983s] running install_data
+[5.994s] creating /home/ubuntu/turtlebot4_ws/install/CC_LidarCollect/share/ament_index
+[5.995s] creating /home/ubuntu/turtlebot4_ws/install/CC_LidarCollect/share/ament_index/resource_index
+[5.996s] creating /home/ubuntu/turtlebot4_ws/install/CC_LidarCollect/share/ament_index/resource_index/packages
+[6.009s] copying resource/CC_LidarCollect -> /home/ubuntu/turtlebot4_ws/install/CC_LidarCollect/share/ament_index/resource_index/packages
+[6.011s] copying package.xml -> /home/ubuntu/turtlebot4_ws/install/CC_LidarCollect/share/CC_LidarCollect
+[6.152s] Invoked command in '/home/ubuntu/turtlebot4_ws/build/CC_LidarCollect' returned '0': PYTHONPATH=/home/ubuntu/turtlebot4_ws/build/CC_LidarCollect/prefix_override:/home/ubuntu/turtlebot4_ws/install/CC_LidarCollect/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ubuntu/turtlebot4_ws/build/CC_LidarCollect/build --no-deps install_data

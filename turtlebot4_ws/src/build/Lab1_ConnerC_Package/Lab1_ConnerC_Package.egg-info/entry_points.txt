@@ -1,0 +1,3 @@
+[console_scripts]
+Lab1_ConnerC_Node = Lab1_ConnerC_Package.Lab1_ConnerC_Node:main
+

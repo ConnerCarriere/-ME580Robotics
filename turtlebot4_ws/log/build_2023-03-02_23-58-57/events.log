@@ -1,0 +1,107 @@
+[0.000000] (-) TimerEvent: {}
+[0.005577] (-) JobUnselected: {'identifier': 'CC_Lab1'}
+[0.006595] (-) JobUnselected: {'identifier': 'CC_Lab2'}
+[0.008368] (-) JobUnselected: {'identifier': 'CC_LidarCollect'}
+[0.009384] (-) JobUnselected: {'identifier': 'Lab1_DerrickS_Package'}
+[0.011595] (-) JobUnselected: {'identifier': 'turtlebot4_python_tutorials'}
+[0.013524] (-) JobUnselected: {'identifier': 'turtlebot4_python_tutorials'}
+[0.016781] (lab1_ian_package) JobQueued: {'identifier': 'lab1_ian_package', 'dependencies': OrderedDict()}
+[0.018488] (lab1_ian_package) JobStarted: {'identifier': 'lab1_ian_package'}
+[0.097070] (-) TimerEvent: {}
+[0.197896] (-) TimerEvent: {}
+[0.298661] (-) TimerEvent: {}
+[0.399428] (-) TimerEvent: {}
+[0.500326] (-) TimerEvent: {}
+[0.601119] (-) TimerEvent: {}
+[0.701864] (-) TimerEvent: {}
+[0.802665] (-) TimerEvent: {}
+[0.903630] (-) TimerEvent: {}
+[1.004395] (-) TimerEvent: {}
+[1.105122] (-) TimerEvent: {}
+[1.205940] (-) TimerEvent: {}
+[1.306803] (-) TimerEvent: {}
+[1.407623] (-) TimerEvent: {}
+[1.509052] (-) TimerEvent: {}
+[1.610516] (-) TimerEvent: {}
+[1.711803] (-) TimerEvent: {}
+[1.812651] (-) TimerEvent: {}
+[1.913417] (-) TimerEvent: {}
+[2.014205] (-) TimerEvent: {}
+[2.115080] (-) TimerEvent: {}
+[2.215957] (-) TimerEvent: {}
+[2.316709] (-) TimerEvent: {}
+[2.417442] (-) TimerEvent: {}
+[2.518203] (-) TimerEvent: {}
+[2.618890] (-) TimerEvent: {}
+[2.719689] (-) TimerEvent: {}
+[2.820562] (-) TimerEvent: {}
+[2.921274] (-) TimerEvent: {}
+[3.021990] (-) TimerEvent: {}
+[3.122824] (-) TimerEvent: {}
+[3.223612] (-) TimerEvent: {}
+[3.324432] (-) TimerEvent: {}
+[3.426980] (-) TimerEvent: {}
+[3.531332] (-) TimerEvent: {}
+[3.629011] (lab1_ian_package) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'develop', '--editable', '--build-directory', '/home/ubuntu/turtlebot4_ws/build/lab1_ian_package/build', '--no-deps', 'install_data'], 'cwd': '/home/ubuntu/turtlebot4_ws/build/lab1_ian_package', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'WORKSPACE_SETUP': '/opt/ros/humble/setup.bash', 'USER': 'ubuntu', 'SSH_CLIENT': '10.42.0.100 33620 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/ubuntu/.vscode-server/bin/f1b07bd25dfad64b0167beb15359ae573aecd2cc/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/ubuntu/.vscode-server/bin/f1b07bd25dfad64b0167beb15359ae573aecd2cc/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/ubuntu', 'CYCLONEDDS_URI': '/etc/turtlebot4/cyclonedds_rpi.xml', 'TERM_PROGRAM_VERSION': '1.83.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-762cfb6e-8270-4a62-85e8-78a1e36db5fb.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/ubuntu/.vscode-server/bin/f1b07bd25dfad64b0167beb15359ae573aecd2cc/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/ubuntu/.vscode-server/bin/f1b07bd25dfad64b0167beb15359ae573aecd2cc/node', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/ubuntu/turtlebot4_ws/install', 'ROBOT_SETUP': '/etc/turtlebot4/setup.bash', 'ROS_DISTRO': 'humble', 'LOGNAME': 'ubuntu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '1', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/ubuntu/.vscode-server/bin/f1b07bd25dfad64b0167beb15359ae573aecd2cc/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'FASTRTPS_DEFAULT_PROFILES_FILE': '/etc/turtlebot4/fastdds_rpi.xml', 'TURTLEBOT4_DIAGNOSTICS': '1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'C.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-d0533cdc0b.sock', 'TERM_PROGRAM': 'vscode', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/home/ubuntu/turtlebot4_ws/install/CC_LidarCollect:/home/ubuntu/turtlebot4_ws/install/CC_Lab2:/home/ubuntu/turtlebot4_ws/install/CC_Lab1:/home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere:/home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials:/home/ubuntu/turtlebot4_ws/install/Lab2_ConnerC_Package:/opt/ros/humble', 'SHELL': '/bin/bash', 'ROS_DISCOVERY_SERVER': '', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'ROBOT_NAMESPACE': '', 'PWD': '/home/ubuntu/turtlebot4_ws/build/lab1_ian_package', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '10.42.0.100 33620 10.42.0.1 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ubuntu/turtlebot4_ws/build/lab1_ian_package/prefix_override:/home/ubuntu/turtlebot4_ws/install/lab1_ian_package/lib/python3.10/site-packages:/home/ubuntu/turtlebot4_ws/build/CC_LidarCollect:/home/ubuntu/turtlebot4_ws/install/CC_LidarCollect/lib/python3.10/site-packages:/home/ubuntu/turtlebot4_ws/build/CC_Lab2:/home/ubuntu/turtlebot4_ws/install/CC_Lab2/lib/python3.10/site-packages:/home/ubuntu/turtlebot4_ws/build/CC_Lab1:/home/ubuntu/turtlebot4_ws/install/CC_Lab1/lib/python3.10/site-packages:/home/ubuntu/turtlebot4_ws/build/turtlebot4_python_tutorials_Conner_Carriere:/home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere/lib/python3.10/site-packages:/home/ubuntu/turtlebot4_ws/build/turtlebot4_python_tutorials:/home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials/lib/python3.10/site-packages:/home/ubuntu/turtlebot4_ws/build/Lab2_ConnerC_Package:/home/ubuntu/turtlebot4_ws/install/Lab2_ConnerC_Package/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[3.638185] (-) TimerEvent: {}
+[3.739022] (-) TimerEvent: {}
+[3.840157] (-) TimerEvent: {}
+[3.942140] (-) TimerEvent: {}
+[4.043118] (-) TimerEvent: {}
+[4.144103] (-) TimerEvent: {}
+[4.245372] (-) TimerEvent: {}
+[4.346083] (-) TimerEvent: {}
+[4.446896] (-) TimerEvent: {}
+[4.547682] (-) TimerEvent: {}
+[4.648440] (-) TimerEvent: {}
+[4.749232] (-) TimerEvent: {}
+[4.850125] (-) TimerEvent: {}
+[4.951193] (-) TimerEvent: {}
+[5.051986] (-) TimerEvent: {}
+[5.097223] (lab1_ian_package) StdoutLine: {'line': b'running develop\n'}
+[5.098937] (lab1_ian_package) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.\n'}
+[5.099785] (lab1_ian_package) StderrLine: {'line': b'  warnings.warn(\n'}
+[5.105368] (lab1_ian_package) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[5.106239] (lab1_ian_package) StderrLine: {'line': b'  warnings.warn(\n'}
+[5.152156] (-) TimerEvent: {}
+[5.253244] (-) TimerEvent: {}
+[5.354480] (-) TimerEvent: {}
+[5.431721] (lab1_ian_package) StderrLine: {'line': b'/usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.16.0-unknown is an invalid version and will not be supported in a future release\n'}
+[5.432608] (lab1_ian_package) StderrLine: {'line': b'  warnings.warn(\n'}
+[5.433465] (lab1_ian_package) StderrLine: {'line': b'/usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.1build1 is an invalid version and will not be supported in a future release\n'}
+[5.434074] (lab1_ian_package) StderrLine: {'line': b'  warnings.warn(\n'}
+[5.434877] (lab1_ian_package) StderrLine: {'line': b'/usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 0.1.43ubuntu1 is an invalid version and will not be supported in a future release\n'}
+[5.435372] (lab1_ian_package) StderrLine: {'line': b'  warnings.warn(\n'}
+[5.454641] (-) TimerEvent: {}
+[5.555465] (-) TimerEvent: {}
+[5.656208] (-) TimerEvent: {}
+[5.757068] (-) TimerEvent: {}
+[5.857840] (-) TimerEvent: {}
+[5.958622] (-) TimerEvent: {}
+[6.047638] (lab1_ian_package) StdoutLine: {'line': b'running egg_info\n'}
+[6.048632] (lab1_ian_package) StdoutLine: {'line': b'creating lab1_ian_package.egg-info\n'}
+[6.051909] (lab1_ian_package) StdoutLine: {'line': b'writing lab1_ian_package.egg-info/PKG-INFO\n'}
+[6.052583] (lab1_ian_package) StdoutLine: {'line': b'writing dependency_links to lab1_ian_package.egg-info/dependency_links.txt\n'}
+[6.053046] (lab1_ian_package) StdoutLine: {'line': b'writing entry points to lab1_ian_package.egg-info/entry_points.txt\n'}
+[6.053452] (lab1_ian_package) StdoutLine: {'line': b'writing requirements to lab1_ian_package.egg-info/requires.txt\n'}
+[6.053879] (lab1_ian_package) StdoutLine: {'line': b'writing top-level names to lab1_ian_package.egg-info/top_level.txt\n'}
+[6.054518] (lab1_ian_package) StdoutLine: {'line': b"writing manifest file 'lab1_ian_package.egg-info/SOURCES.txt'\n"}
+[6.058819] (-) TimerEvent: {}
+[6.059720] (lab1_ian_package) StdoutLine: {'line': b"reading manifest file 'lab1_ian_package.egg-info/SOURCES.txt'\n"}
+[6.064729] (lab1_ian_package) StdoutLine: {'line': b"writing manifest file 'lab1_ian_package.egg-info/SOURCES.txt'\n"}
+[6.070549] (lab1_ian_package) StdoutLine: {'line': b'running build_ext\n'}
+[6.071589] (lab1_ian_package) StdoutLine: {'line': b'Creating /home/ubuntu/turtlebot4_ws/install/lab1_ian_package/lib/python3.10/site-packages/lab1-ian-package.egg-link (link to .)\n'}
+[6.076069] (lab1_ian_package) StdoutLine: {'line': b'Installing lab1_ian_node script to /home/ubuntu/turtlebot4_ws/install/lab1_ian_package/lib/lab1_ian_package\n'}
+[6.079086] (lab1_ian_package) StdoutLine: {'line': b'\n'}
+[6.081587] (lab1_ian_package) StdoutLine: {'line': b'Installed /home/ubuntu/turtlebot4_ws/build/lab1_ian_package\n'}
+[6.086036] (lab1_ian_package) StdoutLine: {'line': b'running install_data\n'}
+[6.087705] (lab1_ian_package) StdoutLine: {'line': b'creating /home/ubuntu/turtlebot4_ws/install/lab1_ian_package/share/ament_index\n'}
+[6.094069] (lab1_ian_package) StdoutLine: {'line': b'creating /home/ubuntu/turtlebot4_ws/install/lab1_ian_package/share/ament_index/resource_index\n'}
+[6.095757] (lab1_ian_package) StdoutLine: {'line': b'creating /home/ubuntu/turtlebot4_ws/install/lab1_ian_package/share/ament_index/resource_index/packages\n'}
+[6.102117] (lab1_ian_package) StdoutLine: {'line': b'copying resource/lab1_ian_package -> /home/ubuntu/turtlebot4_ws/install/lab1_ian_package/share/ament_index/resource_index/packages\n'}
+[6.105678] (lab1_ian_package) StdoutLine: {'line': b'copying package.xml -> /home/ubuntu/turtlebot4_ws/install/lab1_ian_package/share/lab1_ian_package\n'}
+[6.159065] (-) TimerEvent: {}
+[6.250037] (lab1_ian_package) CommandEnded: {'returncode': 0}
+[6.259328] (-) TimerEvent: {}
+[6.346449] (lab1_ian_package) JobEnded: {'identifier': 'lab1_ian_package', 'rc': 0}
+[6.351266] (-) EventReactorShutdown: {}

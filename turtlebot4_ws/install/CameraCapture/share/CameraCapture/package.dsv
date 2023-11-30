@@ -1,0 +1,9 @@
+source;share/CameraCapture/hook/pythonpath.ps1
+source;share/CameraCapture/hook/pythonpath.dsv
+source;share/CameraCapture/hook/pythonpath.sh
+source;share/CameraCapture/hook/ament_prefix_path.ps1
+source;share/CameraCapture/hook/ament_prefix_path.dsv
+source;share/CameraCapture/hook/ament_prefix_path.sh
+source;../../build/CameraCapture/share/CameraCapture/hook/pythonpath_develop.ps1
+source;../../build/CameraCapture/share/CameraCapture/hook/pythonpath_develop.dsv
+source;../../build/CameraCapture/share/CameraCapture/hook/pythonpath_develop.sh

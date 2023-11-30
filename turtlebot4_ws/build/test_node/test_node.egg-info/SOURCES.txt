@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+resource/test_node
+test_node/__init__.py
+test_node/test_node.py
+test_node.egg-info/PKG-INFO
+test_node.egg-info/SOURCES.txt
+test_node.egg-info/dependency_links.txt
+test_node.egg-info/entry_points.txt
+test_node.egg-info/requires.txt
+test_node.egg-info/top_level.txt
+test_node.egg-info/zip-safe

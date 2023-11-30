@@ -1,0 +1,3 @@
+[console_scripts]
+CC_Lab2_LidarData = CC_Lab2.CC_Lab2_LidarData:main
+

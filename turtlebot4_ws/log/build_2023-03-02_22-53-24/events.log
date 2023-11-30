@@ -1,0 +1,101 @@
+[0.000000] (-) TimerEvent: {}
+[0.001418] (-) JobUnselected: {'identifier': 'turtlebot4_python_tutorials'}
+[0.003373] (turtlebot4_python_tutorials_Conner_Carriere) JobQueued: {'identifier': 'turtlebot4_python_tutorials_Conner_Carriere', 'dependencies': OrderedDict()}
+[0.004195] (turtlebot4_python_tutorials_Conner_Carriere) JobStarted: {'identifier': 'turtlebot4_python_tutorials_Conner_Carriere'}
+[0.099032] (-) TimerEvent: {}
+[0.199908] (-) TimerEvent: {}
+[0.300813] (-) TimerEvent: {}
+[0.401741] (-) TimerEvent: {}
+[0.502669] (-) TimerEvent: {}
+[0.603424] (-) TimerEvent: {}
+[0.704105] (-) TimerEvent: {}
+[0.805077] (-) TimerEvent: {}
+[0.905937] (-) TimerEvent: {}
+[1.042743] (-) TimerEvent: {}
+[1.143455] (-) TimerEvent: {}
+[1.244166] (-) TimerEvent: {}
+[1.344967] (-) TimerEvent: {}
+[1.446087] (-) TimerEvent: {}
+[1.548012] (-) TimerEvent: {}
+[1.648952] (-) TimerEvent: {}
+[1.749723] (-) TimerEvent: {}
+[1.850550] (-) TimerEvent: {}
+[1.951456] (-) TimerEvent: {}
+[2.052304] (-) TimerEvent: {}
+[2.153052] (-) TimerEvent: {}
+[2.253818] (-) TimerEvent: {}
+[2.354570] (-) TimerEvent: {}
+[2.455334] (-) TimerEvent: {}
+[2.556104] (-) TimerEvent: {}
+[2.656912] (-) TimerEvent: {}
+[2.758112] (-) TimerEvent: {}
+[2.859040] (-) TimerEvent: {}
+[2.960103] (-) TimerEvent: {}
+[3.060904] (-) TimerEvent: {}
+[3.161770] (-) TimerEvent: {}
+[3.262775] (-) TimerEvent: {}
+[3.363661] (-) TimerEvent: {}
+[3.464573] (-) TimerEvent: {}
+[3.565601] (-) TimerEvent: {}
+[3.666791] (-) TimerEvent: {}
+[3.672765] (turtlebot4_python_tutorials_Conner_Carriere) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'develop', '--editable', '--build-directory', '/home/ubuntu/turtlebot4_ws/build/turtlebot4_python_tutorials_Conner_Carriere/build', '--no-deps', 'install_data'], 'cwd': '/home/ubuntu/turtlebot4_ws/build/turtlebot4_python_tutorials_Conner_Carriere', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'WORKSPACE_SETUP': '/opt/ros/humble/setup.bash', 'USER': 'ubuntu', 'SSH_CLIENT': '10.42.0.100 43818 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/ubuntu', 'CYCLONEDDS_URI': '/etc/turtlebot4/cyclonedds_rpi.xml', 'OLDPWD': '/home/ubuntu/turtlebot4_ws/src', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/ubuntu/turtlebot4_ws/install', 'ROBOT_SETUP': '/etc/turtlebot4/setup.bash', 'ROS_DISTRO': 'humble', 'LOGNAME': 'ubuntu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '5', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'FASTRTPS_DEFAULT_PROFILES_FILE': '/etc/turtlebot4/fastdds_rpi.xml', 'TURTLEBOT4_DIAGNOSTICS': '1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'C.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials:/opt/ros/humble', 'SHELL': '/bin/bash', 'ROS_DISCOVERY_SERVER': '', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROBOT_NAMESPACE': '', 'PWD': '/home/ubuntu/turtlebot4_ws/build/turtlebot4_python_tutorials_Conner_Carriere', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '10.42.0.100 43818 10.42.0.1 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ubuntu/turtlebot4_ws/build/turtlebot4_python_tutorials_Conner_Carriere/prefix_override:/home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere/lib/python3.10/site-packages:/home/ubuntu/turtlebot4_ws/build/turtlebot4_python_tutorials:/home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[3.767094] (-) TimerEvent: {}
+[3.868385] (-) TimerEvent: {}
+[3.969303] (-) TimerEvent: {}
+[4.070019] (-) TimerEvent: {}
+[4.170792] (-) TimerEvent: {}
+[4.271533] (-) TimerEvent: {}
+[4.372305] (-) TimerEvent: {}
+[4.473014] (-) TimerEvent: {}
+[4.573733] (-) TimerEvent: {}
+[4.674511] (-) TimerEvent: {}
+[4.775282] (-) TimerEvent: {}
+[4.875980] (-) TimerEvent: {}
+[4.977149] (-) TimerEvent: {}
+[4.995722] (turtlebot4_python_tutorials_Conner_Carriere) StdoutLine: {'line': b'running develop\n'}
+[5.000350] (turtlebot4_python_tutorials_Conner_Carriere) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.\n'}
+[5.001652] (turtlebot4_python_tutorials_Conner_Carriere) StderrLine: {'line': b'  warnings.warn(\n'}
+[5.009466] (turtlebot4_python_tutorials_Conner_Carriere) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[5.010160] (turtlebot4_python_tutorials_Conner_Carriere) StderrLine: {'line': b'  warnings.warn(\n'}
+[5.077365] (-) TimerEvent: {}
+[5.178038] (-) TimerEvent: {}
+[5.278775] (-) TimerEvent: {}
+[5.323057] (turtlebot4_python_tutorials_Conner_Carriere) StderrLine: {'line': b'/usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.16.0-unknown is an invalid version and will not be supported in a future release\n'}
+[5.323818] (turtlebot4_python_tutorials_Conner_Carriere) StderrLine: {'line': b'  warnings.warn(\n'}
+[5.324945] (turtlebot4_python_tutorials_Conner_Carriere) StderrLine: {'line': b'/usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.1build1 is an invalid version and will not be supported in a future release\n'}
+[5.325818] (turtlebot4_python_tutorials_Conner_Carriere) StderrLine: {'line': b'  warnings.warn(\n'}
+[5.326559] (turtlebot4_python_tutorials_Conner_Carriere) StderrLine: {'line': b'/usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 0.1.43ubuntu1 is an invalid version and will not be supported in a future release\n'}
+[5.327432] (turtlebot4_python_tutorials_Conner_Carriere) StderrLine: {'line': b'  warnings.warn(\n'}
+[5.378948] (-) TimerEvent: {}
+[5.479642] (-) TimerEvent: {}
+[5.580381] (-) TimerEvent: {}
+[5.681121] (-) TimerEvent: {}
+[5.781858] (-) TimerEvent: {}
+[5.882699] (-) TimerEvent: {}
+[5.902306] (turtlebot4_python_tutorials_Conner_Carriere) StdoutLine: {'line': b'running egg_info\n'}
+[5.903384] (turtlebot4_python_tutorials_Conner_Carriere) StdoutLine: {'line': b'creating turtlebot4_python_tutorials_Conner_Carriere.egg-info\n'}
+[5.904493] (turtlebot4_python_tutorials_Conner_Carriere) StdoutLine: {'line': b'writing turtlebot4_python_tutorials_Conner_Carriere.egg-info/PKG-INFO\n'}
+[5.905530] (turtlebot4_python_tutorials_Conner_Carriere) StdoutLine: {'line': b'writing dependency_links to turtlebot4_python_tutorials_Conner_Carriere.egg-info/dependency_links.txt\n'}
+[5.906419] (turtlebot4_python_tutorials_Conner_Carriere) StdoutLine: {'line': b'writing entry points to turtlebot4_python_tutorials_Conner_Carriere.egg-info/entry_points.txt\n'}
+[5.909006] (turtlebot4_python_tutorials_Conner_Carriere) StdoutLine: {'line': b'writing requirements to turtlebot4_python_tutorials_Conner_Carriere.egg-info/requires.txt\n'}
+[5.909669] (turtlebot4_python_tutorials_Conner_Carriere) StdoutLine: {'line': b'writing top-level names to turtlebot4_python_tutorials_Conner_Carriere.egg-info/top_level.txt\n'}
+[5.910178] (turtlebot4_python_tutorials_Conner_Carriere) StdoutLine: {'line': b"writing manifest file 'turtlebot4_python_tutorials_Conner_Carriere.egg-info/SOURCES.txt'\n"}
+[5.917492] (turtlebot4_python_tutorials_Conner_Carriere) StdoutLine: {'line': b"reading manifest file 'turtlebot4_python_tutorials_Conner_Carriere.egg-info/SOURCES.txt'\n"}
+[5.920540] (turtlebot4_python_tutorials_Conner_Carriere) StdoutLine: {'line': b"writing manifest file 'turtlebot4_python_tutorials_Conner_Carriere.egg-info/SOURCES.txt'\n"}
+[5.927252] (turtlebot4_python_tutorials_Conner_Carriere) StdoutLine: {'line': b'running build_ext\n'}
+[5.928304] (turtlebot4_python_tutorials_Conner_Carriere) StdoutLine: {'line': b'Creating /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere/lib/python3.10/site-packages/turtlebot4-python-tutorials-Conner-Carriere.egg-link (link to .)\n'}
+[5.934985] (turtlebot4_python_tutorials_Conner_Carriere) StdoutLine: {'line': b'Installing turtlebot4_first_python_node script to /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere/lib/turtlebot4_python_tutorials_Conner_Carriere\n'}
+[5.935901] (turtlebot4_python_tutorials_Conner_Carriere) StdoutLine: {'line': b'Installing turtlebot4_undock_node script to /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere/lib/turtlebot4_python_tutorials_Conner_Carriere\n'}
+[5.936546] (turtlebot4_python_tutorials_Conner_Carriere) StdoutLine: {'line': b'Installing turtlebot4_wander_node script to /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere/lib/turtlebot4_python_tutorials_Conner_Carriere\n'}
+[5.937457] (turtlebot4_python_tutorials_Conner_Carriere) StdoutLine: {'line': b'\n'}
+[5.938279] (turtlebot4_python_tutorials_Conner_Carriere) StdoutLine: {'line': b'Installed /home/ubuntu/turtlebot4_ws/build/turtlebot4_python_tutorials_Conner_Carriere\n'}
+[5.939466] (turtlebot4_python_tutorials_Conner_Carriere) StdoutLine: {'line': b'running install_data\n'}
+[5.940839] (turtlebot4_python_tutorials_Conner_Carriere) StdoutLine: {'line': b'creating /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere/share/ament_index\n'}
+[5.942067] (turtlebot4_python_tutorials_Conner_Carriere) StdoutLine: {'line': b'creating /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere/share/ament_index/resource_index\n'}
+[5.943380] (turtlebot4_python_tutorials_Conner_Carriere) StdoutLine: {'line': b'creating /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere/share/ament_index/resource_index/packages\n'}
+[5.944805] (turtlebot4_python_tutorials_Conner_Carriere) StderrLine: {'line': b"error: can't copy 'resource/turtlebot4_python_tutorials_Conner_Carriere': doesn't exist or not a regular file\n"}
+[5.983015] (-) TimerEvent: {}
+[6.086432] (-) TimerEvent: {}
+[6.094223] (turtlebot4_python_tutorials_Conner_Carriere) CommandEnded: {'returncode': 1}
+[6.096214] (turtlebot4_python_tutorials_Conner_Carriere) JobEnded: {'identifier': 'turtlebot4_python_tutorials_Conner_Carriere', 'rc': 1}
+[6.107540] (-) EventReactorShutdown: {}

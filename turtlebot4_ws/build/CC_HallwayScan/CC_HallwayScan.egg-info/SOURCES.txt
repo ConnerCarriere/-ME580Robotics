@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+CC_HallwayScan/HallwayScan.py
+CC_HallwayScan/__init__.py
+CC_HallwayScan.egg-info/PKG-INFO
+CC_HallwayScan.egg-info/SOURCES.txt
+CC_HallwayScan.egg-info/dependency_links.txt
+CC_HallwayScan.egg-info/entry_points.txt
+CC_HallwayScan.egg-info/requires.txt
+CC_HallwayScan.egg-info/top_level.txt
+CC_HallwayScan.egg-info/zip-safe
+resource/CC_HallwayScan

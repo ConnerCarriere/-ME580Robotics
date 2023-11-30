@@ -1,0 +1,111 @@
+[0.000000] (-) TimerEvent: {}
+[0.003214] (-) JobUnselected: {'identifier': 'CC_Lab1'}
+[0.005151] (-) JobUnselected: {'identifier': 'CC_Lab2'}
+[0.007541] (-) JobUnselected: {'identifier': 'CC_LidarCollect'}
+[0.008383] (-) JobUnselected: {'identifier': 'Lab1_DerrickS_Package'}
+[0.008546] (-) JobUnselected: {'identifier': 'ianp_lidar_lab'}
+[0.008632] (-) JobUnselected: {'identifier': 'lab1_ian_package'}
+[0.008710] (-) JobUnselected: {'identifier': 'turtlebot4_python_tutorials'}
+[0.008787] (-) JobUnselected: {'identifier': 'turtlebot4_python_tutorials'}
+[0.008875] (CC_HallwayScan) JobQueued: {'identifier': 'CC_HallwayScan', 'dependencies': OrderedDict()}
+[0.008963] (CC_HallwayScan) JobStarted: {'identifier': 'CC_HallwayScan'}
+[0.098798] (-) TimerEvent: {}
+[0.199555] (-) TimerEvent: {}
+[0.300432] (-) TimerEvent: {}
+[0.401201] (-) TimerEvent: {}
+[0.501960] (-) TimerEvent: {}
+[0.603305] (-) TimerEvent: {}
+[0.704174] (-) TimerEvent: {}
+[0.805405] (-) TimerEvent: {}
+[0.906802] (-) TimerEvent: {}
+[1.007629] (-) TimerEvent: {}
+[1.108430] (-) TimerEvent: {}
+[1.209136] (-) TimerEvent: {}
+[1.309870] (-) TimerEvent: {}
+[1.410626] (-) TimerEvent: {}
+[1.511457] (-) TimerEvent: {}
+[1.612573] (-) TimerEvent: {}
+[1.713509] (-) TimerEvent: {}
+[1.814394] (-) TimerEvent: {}
+[1.915199] (-) TimerEvent: {}
+[2.015977] (-) TimerEvent: {}
+[2.116793] (-) TimerEvent: {}
+[2.217580] (-) TimerEvent: {}
+[2.318454] (-) TimerEvent: {}
+[2.419344] (-) TimerEvent: {}
+[2.520451] (-) TimerEvent: {}
+[2.621279] (-) TimerEvent: {}
+[2.722283] (-) TimerEvent: {}
+[2.823063] (-) TimerEvent: {}
+[2.923809] (-) TimerEvent: {}
+[3.024569] (-) TimerEvent: {}
+[3.125388] (-) TimerEvent: {}
+[3.226477] (-) TimerEvent: {}
+[3.327196] (-) TimerEvent: {}
+[3.427997] (-) TimerEvent: {}
+[3.529407] (-) TimerEvent: {}
+[3.630294] (-) TimerEvent: {}
+[3.731582] (-) TimerEvent: {}
+[3.744492] (CC_HallwayScan) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'develop', '--editable', '--build-directory', '/home/ubuntu/turtlebot4_ws/build/CC_HallwayScan/build', '--no-deps', 'install_data'], 'cwd': '/home/ubuntu/turtlebot4_ws/build/CC_HallwayScan', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'WORKSPACE_SETUP': '/opt/ros/humble/setup.bash', 'USER': 'ubuntu', 'SSH_CLIENT': '10.42.0.100 44418 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/ubuntu', 'CYCLONEDDS_URI': '/etc/turtlebot4/cyclonedds_rpi.xml', 'OLDPWD': '/home/ubuntu/turtlebot4_ws', 'SSH_TTY': '/dev/pts/2', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/ubuntu/turtlebot4_ws/install', 'ROBOT_SETUP': '/etc/turtlebot4/setup.bash', 'ROS_DISTRO': 'humble', 'LOGNAME': 'ubuntu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/ubuntu/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'FASTRTPS_DEFAULT_PROFILES_FILE': '/etc/turtlebot4/fastdds_rpi.xml', 'TURTLEBOT4_DIAGNOSTICS': '1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'C.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere:/home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials:/home/ubuntu/turtlebot4_ws/install/lab1_ian_package:/home/ubuntu/turtlebot4_ws/install/Lab2_ConnerC_Package:/home/ubuntu/turtlebot4_ws/install/CC_LidarCollect:/home/ubuntu/turtlebot4_ws/install/CC_Lab2:/home/ubuntu/turtlebot4_ws/install/CC_Lab1:/opt/ros/humble', 'SHELL': '/bin/bash', 'ROS_DISCOVERY_SERVER': '', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROBOT_NAMESPACE': '', 'PWD': '/home/ubuntu/turtlebot4_ws/build/CC_HallwayScan', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '10.42.0.100 44418 10.42.0.1 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ubuntu/turtlebot4_ws/build/CC_HallwayScan/prefix_override:/home/ubuntu/turtlebot4_ws/install/CC_HallwayScan/lib/python3.10/site-packages:/home/ubuntu/turtlebot4_ws/build/turtlebot4_python_tutorials_Conner_Carriere:/home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere/lib/python3.10/site-packages:/home/ubuntu/turtlebot4_ws/build/turtlebot4_python_tutorials:/home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials/lib/python3.10/site-packages:/home/ubuntu/turtlebot4_ws/build/lab1_ian_package:/home/ubuntu/turtlebot4_ws/install/lab1_ian_package/lib/python3.10/site-packages:/home/ubuntu/turtlebot4_ws/build/Lab2_ConnerC_Package:/home/ubuntu/turtlebot4_ws/install/Lab2_ConnerC_Package/lib/python3.10/site-packages:/home/ubuntu/turtlebot4_ws/build/CC_LidarCollect:/home/ubuntu/turtlebot4_ws/install/CC_LidarCollect/lib/python3.10/site-packages:/home/ubuntu/turtlebot4_ws/build/CC_Lab2:/home/ubuntu/turtlebot4_ws/install/CC_Lab2/lib/python3.10/site-packages:/home/ubuntu/turtlebot4_ws/build/CC_Lab1:/home/ubuntu/turtlebot4_ws/install/CC_Lab1/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[3.831786] (-) TimerEvent: {}
+[3.932967] (-) TimerEvent: {}
+[4.033907] (-) TimerEvent: {}
+[4.134737] (-) TimerEvent: {}
+[4.235518] (-) TimerEvent: {}
+[4.336662] (-) TimerEvent: {}
+[4.437447] (-) TimerEvent: {}
+[4.553716] (-) TimerEvent: {}
+[4.654472] (-) TimerEvent: {}
+[4.755292] (-) TimerEvent: {}
+[4.856043] (-) TimerEvent: {}
+[4.957187] (-) TimerEvent: {}
+[5.058018] (-) TimerEvent: {}
+[5.158865] (-) TimerEvent: {}
+[5.180418] (CC_HallwayScan) StdoutLine: {'line': b'running develop\n'}
+[5.185513] (CC_HallwayScan) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.\n'}
+[5.186599] (CC_HallwayScan) StderrLine: {'line': b'  warnings.warn(\n'}
+[5.197821] (CC_HallwayScan) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[5.199967] (CC_HallwayScan) StderrLine: {'line': b'  warnings.warn(\n'}
+[5.259037] (-) TimerEvent: {}
+[5.359838] (-) TimerEvent: {}
+[5.460679] (-) TimerEvent: {}
+[5.542480] (CC_HallwayScan) StderrLine: {'line': b'/usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.16.0-unknown is an invalid version and will not be supported in a future release\n'}
+[5.543395] (CC_HallwayScan) StderrLine: {'line': b'  warnings.warn(\n'}
+[5.544416] (CC_HallwayScan) StderrLine: {'line': b'/usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.1build1 is an invalid version and will not be supported in a future release\n'}
+[5.545051] (CC_HallwayScan) StderrLine: {'line': b'  warnings.warn(\n'}
+[5.545768] (CC_HallwayScan) StderrLine: {'line': b'/usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 0.1.43ubuntu1 is an invalid version and will not be supported in a future release\n'}
+[5.546199] (CC_HallwayScan) StderrLine: {'line': b'  warnings.warn(\n'}
+[5.560844] (-) TimerEvent: {}
+[5.661717] (-) TimerEvent: {}
+[5.762513] (-) TimerEvent: {}
+[5.863282] (-) TimerEvent: {}
+[5.964427] (-) TimerEvent: {}
+[6.065165] (-) TimerEvent: {}
+[6.165951] (-) TimerEvent: {}
+[6.180169] (CC_HallwayScan) StdoutLine: {'line': b'running egg_info\n'}
+[6.180879] (CC_HallwayScan) StdoutLine: {'line': b'creating CC_HallwayScan.egg-info\n'}
+[6.184876] (CC_HallwayScan) StdoutLine: {'line': b'writing CC_HallwayScan.egg-info/PKG-INFO\n'}
+[6.185473] (CC_HallwayScan) StdoutLine: {'line': b'writing dependency_links to CC_HallwayScan.egg-info/dependency_links.txt\n'}
+[6.185895] (CC_HallwayScan) StdoutLine: {'line': b'writing entry points to CC_HallwayScan.egg-info/entry_points.txt\n'}
+[6.186304] (CC_HallwayScan) StdoutLine: {'line': b'writing requirements to CC_HallwayScan.egg-info/requires.txt\n'}
+[6.186704] (CC_HallwayScan) StdoutLine: {'line': b'writing top-level names to CC_HallwayScan.egg-info/top_level.txt\n'}
+[6.187074] (CC_HallwayScan) StdoutLine: {'line': b"writing manifest file 'CC_HallwayScan.egg-info/SOURCES.txt'\n"}
+[6.193604] (CC_HallwayScan) StdoutLine: {'line': b"reading manifest file 'CC_HallwayScan.egg-info/SOURCES.txt'\n"}
+[6.196233] (CC_HallwayScan) StdoutLine: {'line': b"writing manifest file 'CC_HallwayScan.egg-info/SOURCES.txt'\n"}
+[6.204611] (CC_HallwayScan) StdoutLine: {'line': b'running build_ext\n'}
+[6.208058] (CC_HallwayScan) StdoutLine: {'line': b'Creating /home/ubuntu/turtlebot4_ws/install/CC_HallwayScan/lib/python3.10/site-packages/CC-HallwayScan.egg-link (link to .)\n'}
+[6.211314] (CC_HallwayScan) StdoutLine: {'line': b'Installing HallwayScan script to /home/ubuntu/turtlebot4_ws/install/CC_HallwayScan/lib/CC_HallwayScan\n'}
+[6.215060] (CC_HallwayScan) StdoutLine: {'line': b'\n'}
+[6.215833] (CC_HallwayScan) StdoutLine: {'line': b'Installed /home/ubuntu/turtlebot4_ws/build/CC_HallwayScan\n'}
+[6.218206] (CC_HallwayScan) StdoutLine: {'line': b'running install_data\n'}
+[6.221029] (CC_HallwayScan) StdoutLine: {'line': b'creating /home/ubuntu/turtlebot4_ws/install/CC_HallwayScan/share/ament_index\n'}
+[6.222318] (CC_HallwayScan) StdoutLine: {'line': b'creating /home/ubuntu/turtlebot4_ws/install/CC_HallwayScan/share/ament_index/resource_index\n'}
+[6.225903] (CC_HallwayScan) StdoutLine: {'line': b'creating /home/ubuntu/turtlebot4_ws/install/CC_HallwayScan/share/ament_index/resource_index/packages\n'}
+[6.228461] (CC_HallwayScan) StdoutLine: {'line': b'copying resource/CC_HallwayScan -> /home/ubuntu/turtlebot4_ws/install/CC_HallwayScan/share/ament_index/resource_index/packages\n'}
+[6.229834] (CC_HallwayScan) StdoutLine: {'line': b'copying package.xml -> /home/ubuntu/turtlebot4_ws/install/CC_HallwayScan/share/CC_HallwayScan\n'}
+[6.266351] (-) TimerEvent: {}
+[6.367547] (-) TimerEvent: {}
+[6.369645] (CC_HallwayScan) CommandEnded: {'returncode': 0}
+[6.467847] (-) TimerEvent: {}
+[6.479784] (CC_HallwayScan) JobEnded: {'identifier': 'CC_HallwayScan', 'rc': 0}
+[6.487656] (-) EventReactorShutdown: {}

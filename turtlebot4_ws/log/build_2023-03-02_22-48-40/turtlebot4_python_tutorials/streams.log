@@ -1,0 +1,27 @@
+[3.168s] Invoking command in '/home/ubuntu/turtlebot4_ws/build/turtlebot4_python_tutorials': PYTHONPATH=/home/ubuntu/turtlebot4_ws/build/turtlebot4_python_tutorials/prefix_override:/home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ubuntu/turtlebot4_ws/build/turtlebot4_python_tutorials/build --no-deps install_data
+[4.435s] running develop
+[4.439s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[4.440s]   warnings.warn(
+[4.447s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[4.447s]   warnings.warn(
+[4.735s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.16.0-unknown is an invalid version and will not be supported in a future release
+[4.736s]   warnings.warn(
+[4.737s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.1build1 is an invalid version and will not be supported in a future release
+[4.737s]   warnings.warn(
+[4.738s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 0.1.43ubuntu1 is an invalid version and will not be supported in a future release
+[4.739s]   warnings.warn(
+[5.256s] running egg_info
+[5.256s] writing turtlebot4_python_tutorials.egg-info/PKG-INFO
+[5.258s] writing dependency_links to turtlebot4_python_tutorials.egg-info/dependency_links.txt
+[5.259s] writing entry points to turtlebot4_python_tutorials.egg-info/entry_points.txt
+[5.261s] writing requirements to turtlebot4_python_tutorials.egg-info/requires.txt
+[5.261s] writing top-level names to turtlebot4_python_tutorials.egg-info/top_level.txt
+[5.269s] reading manifest file 'turtlebot4_python_tutorials.egg-info/SOURCES.txt'
+[5.272s] writing manifest file 'turtlebot4_python_tutorials.egg-info/SOURCES.txt'
+[5.279s] running build_ext
+[5.279s] Creating /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials/lib/python3.10/site-packages/turtlebot4-python-tutorials.egg-link (link to .)
+[5.284s] Installing turtlebot4_first_python_node script to /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials/lib/turtlebot4_python_tutorials
+[5.285s] 
+[5.286s] Installed /home/ubuntu/turtlebot4_ws/build/turtlebot4_python_tutorials
+[5.286s] running install_data
+[5.440s] Invoked command in '/home/ubuntu/turtlebot4_ws/build/turtlebot4_python_tutorials' returned '0': PYTHONPATH=/home/ubuntu/turtlebot4_ws/build/turtlebot4_python_tutorials/prefix_override:/home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ubuntu/turtlebot4_ws/build/turtlebot4_python_tutorials/build --no-deps install_data

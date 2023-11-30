@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+CameraCapture/CameraCaputre.py
+CameraCapture/__init__.py
+CameraCapture.egg-info/PKG-INFO
+CameraCapture.egg-info/SOURCES.txt
+CameraCapture.egg-info/dependency_links.txt
+CameraCapture.egg-info/entry_points.txt
+CameraCapture.egg-info/requires.txt
+CameraCapture.egg-info/top_level.txt
+CameraCapture.egg-info/zip-safe
+resource/CameraCapture

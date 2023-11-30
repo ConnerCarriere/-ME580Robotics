@@ -1,0 +1,3 @@
+[console_scripts]
+lab1_ian_node = lab1_ian_package.lab1_ian_node:main
+

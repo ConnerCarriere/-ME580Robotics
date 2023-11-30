@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+Lab1_ConnerC_Package/Lab1_ConnerC_Node.py
+Lab1_ConnerC_Package/__init__.py
+Lab1_ConnerC_Package.egg-info/PKG-INFO
+Lab1_ConnerC_Package.egg-info/SOURCES.txt
+Lab1_ConnerC_Package.egg-info/dependency_links.txt
+Lab1_ConnerC_Package.egg-info/entry_points.txt
+Lab1_ConnerC_Package.egg-info/requires.txt
+Lab1_ConnerC_Package.egg-info/top_level.txt
+Lab1_ConnerC_Package.egg-info/zip-safe
+resource/Lab1_ConnerC_Package

@@ -1,0 +1,36 @@
+[6.810s] Invoking command in '/home/ubuntu/turtlebot4_ws/src/build/turtlebot4_python_tutorials_Conner_Carriere': PYTHONPATH=/home/ubuntu/turtlebot4_ws/src/build/turtlebot4_python_tutorials_Conner_Carriere/prefix_override:/home/ubuntu/turtlebot4_ws/src/install/turtlebot4_python_tutorials_Conner_Carriere/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ubuntu/turtlebot4_ws/src/build/turtlebot4_python_tutorials_Conner_Carriere/build --no-deps install_data
+[8.644s] running develop
+[8.647s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[8.647s]   warnings.warn(
+[8.660s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[8.661s]   warnings.warn(
+[9.110s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.16.0-unknown is an invalid version and will not be supported in a future release
+[9.111s]   warnings.warn(
+[9.115s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.1build1 is an invalid version and will not be supported in a future release
+[9.116s]   warnings.warn(
+[9.117s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 0.1.43ubuntu1 is an invalid version and will not be supported in a future release
+[9.117s]   warnings.warn(
+[9.850s] running egg_info
+[9.851s] creating turtlebot4_python_tutorials_Conner_Carriere.egg-info
+[9.854s] writing turtlebot4_python_tutorials_Conner_Carriere.egg-info/PKG-INFO
+[9.857s] writing dependency_links to turtlebot4_python_tutorials_Conner_Carriere.egg-info/dependency_links.txt
+[9.859s] writing entry points to turtlebot4_python_tutorials_Conner_Carriere.egg-info/entry_points.txt
+[9.861s] writing requirements to turtlebot4_python_tutorials_Conner_Carriere.egg-info/requires.txt
+[9.863s] writing top-level names to turtlebot4_python_tutorials_Conner_Carriere.egg-info/top_level.txt
+[9.866s] writing manifest file 'turtlebot4_python_tutorials_Conner_Carriere.egg-info/SOURCES.txt'
+[9.878s] reading manifest file 'turtlebot4_python_tutorials_Conner_Carriere.egg-info/SOURCES.txt'
+[9.882s] writing manifest file 'turtlebot4_python_tutorials_Conner_Carriere.egg-info/SOURCES.txt'
+[9.894s] running build_ext
+[9.895s] Creating /home/ubuntu/turtlebot4_ws/src/install/turtlebot4_python_tutorials_Conner_Carriere/lib/python3.10/site-packages/turtlebot4-python-tutorials-Conner-Carriere.egg-link (link to .)
+[9.903s] Installing turtlebot4_first_python_node script to /home/ubuntu/turtlebot4_ws/src/install/turtlebot4_python_tutorials_Conner_Carriere/lib/turtlebot4_python_tutorials_Conner_Carriere
+[9.904s] Installing turtlebot4_undock_node script to /home/ubuntu/turtlebot4_ws/src/install/turtlebot4_python_tutorials_Conner_Carriere/lib/turtlebot4_python_tutorials_Conner_Carriere
+[9.906s] Installing turtlebot4_wander_node script to /home/ubuntu/turtlebot4_ws/src/install/turtlebot4_python_tutorials_Conner_Carriere/lib/turtlebot4_python_tutorials_Conner_Carriere
+[9.908s] 
+[9.909s] Installed /home/ubuntu/turtlebot4_ws/src/build/turtlebot4_python_tutorials_Conner_Carriere
+[9.910s] running install_data
+[9.911s] creating /home/ubuntu/turtlebot4_ws/src/install/turtlebot4_python_tutorials_Conner_Carriere/share/ament_index
+[9.911s] creating /home/ubuntu/turtlebot4_ws/src/install/turtlebot4_python_tutorials_Conner_Carriere/share/ament_index/resource_index
+[9.912s] creating /home/ubuntu/turtlebot4_ws/src/install/turtlebot4_python_tutorials_Conner_Carriere/share/ament_index/resource_index/packages
+[9.913s] copying resource/turtlebot4_python_tutorials_Conner_Carriere -> /home/ubuntu/turtlebot4_ws/src/install/turtlebot4_python_tutorials_Conner_Carriere/share/ament_index/resource_index/packages
+[9.914s] copying package.xml -> /home/ubuntu/turtlebot4_ws/src/install/turtlebot4_python_tutorials_Conner_Carriere/share/turtlebot4_python_tutorials_Conner_Carriere
+[10.211s] Invoked command in '/home/ubuntu/turtlebot4_ws/src/build/turtlebot4_python_tutorials_Conner_Carriere' returned '0': PYTHONPATH=/home/ubuntu/turtlebot4_ws/src/build/turtlebot4_python_tutorials_Conner_Carriere/prefix_override:/home/ubuntu/turtlebot4_ws/src/install/turtlebot4_python_tutorials_Conner_Carriere/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ubuntu/turtlebot4_ws/src/build/turtlebot4_python_tutorials_Conner_Carriere/build --no-deps install_data

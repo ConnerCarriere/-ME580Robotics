@@ -1,0 +1,34 @@
+[3.617s] Invoking command in '/home/ubuntu/turtlebot4_ws/build/lab1_ian_package': PYTHONPATH=/home/ubuntu/turtlebot4_ws/build/lab1_ian_package/prefix_override:/home/ubuntu/turtlebot4_ws/install/lab1_ian_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ubuntu/turtlebot4_ws/build/lab1_ian_package/build --no-deps install_data
+[5.079s] running develop
+[5.080s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[5.081s]   warnings.warn(
+[5.087s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[5.089s]   warnings.warn(
+[5.413s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.16.0-unknown is an invalid version and will not be supported in a future release
+[5.414s]   warnings.warn(
+[5.415s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.1build1 is an invalid version and will not be supported in a future release
+[5.415s]   warnings.warn(
+[5.416s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 0.1.43ubuntu1 is an invalid version and will not be supported in a future release
+[5.416s]   warnings.warn(
+[6.029s] running egg_info
+[6.030s] creating lab1_ian_package.egg-info
+[6.033s] writing lab1_ian_package.egg-info/PKG-INFO
+[6.034s] writing dependency_links to lab1_ian_package.egg-info/dependency_links.txt
+[6.034s] writing entry points to lab1_ian_package.egg-info/entry_points.txt
+[6.034s] writing requirements to lab1_ian_package.egg-info/requires.txt
+[6.035s] writing top-level names to lab1_ian_package.egg-info/top_level.txt
+[6.036s] writing manifest file 'lab1_ian_package.egg-info/SOURCES.txt'
+[6.041s] reading manifest file 'lab1_ian_package.egg-info/SOURCES.txt'
+[6.046s] writing manifest file 'lab1_ian_package.egg-info/SOURCES.txt'
+[6.052s] running build_ext
+[6.053s] Creating /home/ubuntu/turtlebot4_ws/install/lab1_ian_package/lib/python3.10/site-packages/lab1-ian-package.egg-link (link to .)
+[6.057s] Installing lab1_ian_node script to /home/ubuntu/turtlebot4_ws/install/lab1_ian_package/lib/lab1_ian_package
+[6.062s] 
+[6.063s] Installed /home/ubuntu/turtlebot4_ws/build/lab1_ian_package
+[6.068s] running install_data
+[6.074s] creating /home/ubuntu/turtlebot4_ws/install/lab1_ian_package/share/ament_index
+[6.076s] creating /home/ubuntu/turtlebot4_ws/install/lab1_ian_package/share/ament_index/resource_index
+[6.080s] creating /home/ubuntu/turtlebot4_ws/install/lab1_ian_package/share/ament_index/resource_index/packages
+[6.085s] copying resource/lab1_ian_package -> /home/ubuntu/turtlebot4_ws/install/lab1_ian_package/share/ament_index/resource_index/packages
+[6.096s] copying package.xml -> /home/ubuntu/turtlebot4_ws/install/lab1_ian_package/share/lab1_ian_package
+[6.237s] Invoked command in '/home/ubuntu/turtlebot4_ws/build/lab1_ian_package' returned '0': PYTHONPATH=/home/ubuntu/turtlebot4_ws/build/lab1_ian_package/prefix_override:/home/ubuntu/turtlebot4_ws/install/lab1_ian_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ubuntu/turtlebot4_ws/build/lab1_ian_package/build --no-deps install_data

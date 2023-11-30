@@ -1,0 +1,31 @@
+[4.688s] Invoking command in '/home/ubuntu/turtlebot4_ws/build/turtlebot4_python_tutorials_Conner_Carriere': PYTHONPATH=/home/ubuntu/turtlebot4_ws/build/turtlebot4_python_tutorials_Conner_Carriere/prefix_override:/home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ubuntu/turtlebot4_ws/build/turtlebot4_python_tutorials_Conner_Carriere/build --no-deps install_data
+[6.243s] running develop
+[6.246s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[6.247s]   warnings.warn(
+[6.255s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[6.256s]   warnings.warn(
+[6.634s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.16.0-unknown is an invalid version and will not be supported in a future release
+[6.635s]   warnings.warn(
+[6.636s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.1build1 is an invalid version and will not be supported in a future release
+[6.640s]   warnings.warn(
+[6.641s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 0.1.43ubuntu1 is an invalid version and will not be supported in a future release
+[6.642s]   warnings.warn(
+[7.389s] running egg_info
+[7.391s] writing turtlebot4_python_tutorials_Conner_Carriere.egg-info/PKG-INFO
+[7.402s] writing dependency_links to turtlebot4_python_tutorials_Conner_Carriere.egg-info/dependency_links.txt
+[7.403s] writing entry points to turtlebot4_python_tutorials_Conner_Carriere.egg-info/entry_points.txt
+[7.414s] writing requirements to turtlebot4_python_tutorials_Conner_Carriere.egg-info/requires.txt
+[7.416s] writing top-level names to turtlebot4_python_tutorials_Conner_Carriere.egg-info/top_level.txt
+[7.422s] reading manifest file 'turtlebot4_python_tutorials_Conner_Carriere.egg-info/SOURCES.txt'
+[7.433s] writing manifest file 'turtlebot4_python_tutorials_Conner_Carriere.egg-info/SOURCES.txt'
+[7.441s] running build_ext
+[7.443s] Creating /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere/lib/python3.10/site-packages/turtlebot4-python-tutorials-Conner-Carriere.egg-link (link to .)
+[7.458s] Installing turtlebot4_first_python_node script to /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere/lib/turtlebot4_python_tutorials_Conner_Carriere
+[7.459s] Installing turtlebot4_undock_node script to /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere/lib/turtlebot4_python_tutorials_Conner_Carriere
+[7.461s] Installing turtlebot4_wander_node script to /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere/lib/turtlebot4_python_tutorials_Conner_Carriere
+[7.471s] 
+[7.473s] Installed /home/ubuntu/turtlebot4_ws/build/turtlebot4_python_tutorials_Conner_Carriere
+[7.475s] running install_data
+[7.498s] copying resource/turtlebot4_python_tutorials_Conner_Carriere -> /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere/share/ament_index/resource_index/packages
+[7.500s] copying package.xml -> /home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere/share/turtlebot4_python_tutorials_Conner_Carriere
+[7.706s] Invoked command in '/home/ubuntu/turtlebot4_ws/build/turtlebot4_python_tutorials_Conner_Carriere' returned '0': PYTHONPATH=/home/ubuntu/turtlebot4_ws/build/turtlebot4_python_tutorials_Conner_Carriere/prefix_override:/home/ubuntu/turtlebot4_ws/install/turtlebot4_python_tutorials_Conner_Carriere/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ubuntu/turtlebot4_ws/build/turtlebot4_python_tutorials_Conner_Carriere/build --no-deps install_data

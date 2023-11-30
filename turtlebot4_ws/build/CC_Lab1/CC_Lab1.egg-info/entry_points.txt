@@ -1,0 +1,3 @@
+[console_scripts]
+CC_Lab1_wander = CC_Lab1.CC_Lab1_wander:main
+

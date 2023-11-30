@@ -1,0 +1,27 @@
+[3.411s] Invoking command in '/home/ubuntu/turtlebot4_ws/src/build/Lab2_ConnerC_Package': PYTHONPATH=/home/ubuntu/turtlebot4_ws/src/build/Lab2_ConnerC_Package/prefix_override:/home/ubuntu/turtlebot4_ws/src/install/Lab2_ConnerC_Package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ubuntu/turtlebot4_ws/src/build/Lab2_ConnerC_Package/build --no-deps install_data
+[4.708s] running develop
+[4.712s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[4.713s]   warnings.warn(
+[4.720s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[4.721s]   warnings.warn(
+[5.036s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.16.0-unknown is an invalid version and will not be supported in a future release
+[5.036s]   warnings.warn(
+[5.038s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.1build1 is an invalid version and will not be supported in a future release
+[5.039s]   warnings.warn(
+[5.039s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 0.1.43ubuntu1 is an invalid version and will not be supported in a future release
+[5.040s]   warnings.warn(
+[5.593s] running egg_info
+[5.596s] writing Lab2_ConnerC_Package.egg-info/PKG-INFO
+[5.597s] writing dependency_links to Lab2_ConnerC_Package.egg-info/dependency_links.txt
+[5.600s] writing entry points to Lab2_ConnerC_Package.egg-info/entry_points.txt
+[5.600s] writing requirements to Lab2_ConnerC_Package.egg-info/requires.txt
+[5.601s] writing top-level names to Lab2_ConnerC_Package.egg-info/top_level.txt
+[5.607s] reading manifest file 'Lab2_ConnerC_Package.egg-info/SOURCES.txt'
+[5.613s] writing manifest file 'Lab2_ConnerC_Package.egg-info/SOURCES.txt'
+[5.621s] running build_ext
+[5.622s] Creating /home/ubuntu/turtlebot4_ws/src/install/Lab2_ConnerC_Package/lib/python3.10/site-packages/Lab2-ConnerC-Package.egg-link (link to .)
+[5.626s] Installing LidarListen script to /home/ubuntu/turtlebot4_ws/src/install/Lab2_ConnerC_Package/lib/Lab2_ConnerC_Package
+[5.628s] 
+[5.629s] Installed /home/ubuntu/turtlebot4_ws/src/build/Lab2_ConnerC_Package
+[5.630s] running install_data
+[5.794s] Invoked command in '/home/ubuntu/turtlebot4_ws/src/build/Lab2_ConnerC_Package' returned '0': PYTHONPATH=/home/ubuntu/turtlebot4_ws/src/build/Lab2_ConnerC_Package/prefix_override:/home/ubuntu/turtlebot4_ws/src/install/Lab2_ConnerC_Package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ubuntu/turtlebot4_ws/src/build/Lab2_ConnerC_Package/build --no-deps install_data

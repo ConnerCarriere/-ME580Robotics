@@ -1,0 +1,3 @@
+[console_scripts]
+HallwayScan = CC_HallwayScan.HallwayScan:main
+

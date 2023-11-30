@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+lab1_ian_package/__init__.py
+lab1_ian_package/lab1_ian_node.py
+lab1_ian_package.egg-info/PKG-INFO
+lab1_ian_package.egg-info/SOURCES.txt
+lab1_ian_package.egg-info/dependency_links.txt
+lab1_ian_package.egg-info/entry_points.txt
+lab1_ian_package.egg-info/requires.txt
+lab1_ian_package.egg-info/top_level.txt
+lab1_ian_package.egg-info/zip-safe
+resource/lab1_ian_package

@@ -1,0 +1,39 @@
+[3.310s] Invoking command in '/home/ubuntu/turtlebot4_ws/src/Lab2_ConnerC_Package': PYTHONPATH=/home/ubuntu/turtlebot4_ws/src/build/Lab2_ConnerC_Package/prefix_override:/home/ubuntu/turtlebot4_ws/src/install/Lab2_ConnerC_Package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/Lab2_ConnerC_Package build --build-base /home/ubuntu/turtlebot4_ws/src/build/Lab2_ConnerC_Package/build install --record /home/ubuntu/turtlebot4_ws/src/build/Lab2_ConnerC_Package/install.log --single-version-externally-managed
+[4.512s] running egg_info
+[4.515s] creating ../build/Lab2_ConnerC_Package/Lab2_ConnerC_Package.egg-info
+[4.516s] writing ../build/Lab2_ConnerC_Package/Lab2_ConnerC_Package.egg-info/PKG-INFO
+[4.517s] writing dependency_links to ../build/Lab2_ConnerC_Package/Lab2_ConnerC_Package.egg-info/dependency_links.txt
+[4.519s] writing entry points to ../build/Lab2_ConnerC_Package/Lab2_ConnerC_Package.egg-info/entry_points.txt
+[4.520s] writing requirements to ../build/Lab2_ConnerC_Package/Lab2_ConnerC_Package.egg-info/requires.txt
+[4.521s] writing top-level names to ../build/Lab2_ConnerC_Package/Lab2_ConnerC_Package.egg-info/top_level.txt
+[4.522s] writing manifest file '../build/Lab2_ConnerC_Package/Lab2_ConnerC_Package.egg-info/SOURCES.txt'
+[4.530s] reading manifest file '../build/Lab2_ConnerC_Package/Lab2_ConnerC_Package.egg-info/SOURCES.txt'
+[4.533s] writing manifest file '../build/Lab2_ConnerC_Package/Lab2_ConnerC_Package.egg-info/SOURCES.txt'
+[4.534s] running build
+[4.535s] running build_py
+[4.536s] creating /home/ubuntu/turtlebot4_ws/src/build/Lab2_ConnerC_Package/build
+[4.537s] creating /home/ubuntu/turtlebot4_ws/src/build/Lab2_ConnerC_Package/build/lib
+[4.538s] creating /home/ubuntu/turtlebot4_ws/src/build/Lab2_ConnerC_Package/build/lib/Lab2_ConnerC_Package
+[4.538s] copying Lab2_ConnerC_Package/__init__.py -> /home/ubuntu/turtlebot4_ws/src/build/Lab2_ConnerC_Package/build/lib/Lab2_ConnerC_Package
+[4.542s] copying Lab2_ConnerC_Package/LidarListen.py -> /home/ubuntu/turtlebot4_ws/src/build/Lab2_ConnerC_Package/build/lib/Lab2_ConnerC_Package
+[4.543s] running install
+[4.543s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[4.544s]   warnings.warn(
+[4.544s] running install_lib
+[4.545s] creating /home/ubuntu/turtlebot4_ws/src/install/Lab2_ConnerC_Package/lib/python3.10/site-packages/Lab2_ConnerC_Package
+[4.546s] copying /home/ubuntu/turtlebot4_ws/src/build/Lab2_ConnerC_Package/build/lib/Lab2_ConnerC_Package/__init__.py -> /home/ubuntu/turtlebot4_ws/src/install/Lab2_ConnerC_Package/lib/python3.10/site-packages/Lab2_ConnerC_Package
+[4.548s] copying /home/ubuntu/turtlebot4_ws/src/build/Lab2_ConnerC_Package/build/lib/Lab2_ConnerC_Package/LidarListen.py -> /home/ubuntu/turtlebot4_ws/src/install/Lab2_ConnerC_Package/lib/python3.10/site-packages/Lab2_ConnerC_Package
+[4.550s] byte-compiling /home/ubuntu/turtlebot4_ws/src/install/Lab2_ConnerC_Package/lib/python3.10/site-packages/Lab2_ConnerC_Package/__init__.py to __init__.cpython-310.pyc
+[4.551s] byte-compiling /home/ubuntu/turtlebot4_ws/src/install/Lab2_ConnerC_Package/lib/python3.10/site-packages/Lab2_ConnerC_Package/LidarListen.py to LidarListen.cpython-310.pyc
+[4.553s] running install_data
+[4.555s] creating /home/ubuntu/turtlebot4_ws/src/install/Lab2_ConnerC_Package/share/ament_index
+[4.557s] creating /home/ubuntu/turtlebot4_ws/src/install/Lab2_ConnerC_Package/share/ament_index/resource_index
+[4.558s] creating /home/ubuntu/turtlebot4_ws/src/install/Lab2_ConnerC_Package/share/ament_index/resource_index/packages
+[4.558s] copying resource/Lab2_ConnerC_Package -> /home/ubuntu/turtlebot4_ws/src/install/Lab2_ConnerC_Package/share/ament_index/resource_index/packages
+[4.559s] copying package.xml -> /home/ubuntu/turtlebot4_ws/src/install/Lab2_ConnerC_Package/share/Lab2_ConnerC_Package
+[4.560s] running install_egg_info
+[4.566s] Copying ../build/Lab2_ConnerC_Package/Lab2_ConnerC_Package.egg-info to /home/ubuntu/turtlebot4_ws/src/install/Lab2_ConnerC_Package/lib/python3.10/site-packages/Lab2_ConnerC_Package-0.0.0-py3.10.egg-info
+[4.575s] running install_scripts
+[4.663s] Installing LidarListen script to /home/ubuntu/turtlebot4_ws/src/install/Lab2_ConnerC_Package/lib/Lab2_ConnerC_Package
+[4.664s] writing list of installed files to '/home/ubuntu/turtlebot4_ws/src/build/Lab2_ConnerC_Package/install.log'
+[4.800s] Invoked command in '/home/ubuntu/turtlebot4_ws/src/Lab2_ConnerC_Package' returned '0': PYTHONPATH=/home/ubuntu/turtlebot4_ws/src/build/Lab2_ConnerC_Package/prefix_override:/home/ubuntu/turtlebot4_ws/src/install/Lab2_ConnerC_Package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/Lab2_ConnerC_Package build --build-base /home/ubuntu/turtlebot4_ws/src/build/Lab2_ConnerC_Package/build install --record /home/ubuntu/turtlebot4_ws/src/build/Lab2_ConnerC_Package/install.log --single-version-externally-managed
